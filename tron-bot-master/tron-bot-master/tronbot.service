@@ -1,0 +1,13 @@
+[Unit]
+Description=TronBot service
+After=network.target
+
+[Service]
+Type=idle
+WorkingDirectory=/home/iexbase/tron_bot
+User=root
+Group=root
+ExecStart=/usr/bin/python3.6 tron_bot.py
+
+[Install]
+WantedBy=multi-user.target

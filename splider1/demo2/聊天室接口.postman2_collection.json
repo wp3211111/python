@@ -1,0 +1,1210 @@
+{
+	"info": {
+		"_postman_id": "3be37cc7-19b4-40f0-9c41-1e9233703b42",
+		"name": "聊天室接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21067601"
+	},
+	"item": [
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "成功返回",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"username\",\"password\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"code\":200,\r\n    \"msg\":\"登录成功\",\r\n    \"access_token\": \"access_token\"\r\n\r\n}"
+				},
+				{
+					"name": "用户名或者密码错误",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"username\",\"password\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"msg\": \"用户名或密码错误\"\n}"
+				},
+				{
+					"name": "密码错误七次 拉黑 ip返回",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"username\",\"password\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\"code\": 401, \"msg\": \"您的ip已被封禁\"}"
+				}
+			]
+		},
+		{
+			"name": "修改密码",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"password\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/change_password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"change_password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "修改出错",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"xx\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/change_password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"请求参数错误\"\n}"
+				},
+				{
+					"name": "修改成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"password\":\"password\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/change_password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"msg\": \"修改成功\"\n}"
+				},
+				{
+					"name": "修改 出错2 参数为空 发返回",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"password\":\"\"}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/change_password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"change_password"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"密码不能为空\"\n}"
+				}
+			]
+		},
+		{
+			"name": "修改用户名及密码",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"username\",\"password\":\"password\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/change_admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"change_admin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "修改用户名及密码 成功返回",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"username\",\"password\":\"password\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"msg\": \"修改成功\"\r\n}"
+				},
+				{
+					"name": "修改用户名及密码 错误1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"x\":\"username\",\"x2\":\"password\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"code\": 202,\r\n    \"msg\": \"请求参数错误\"\r\n}"
+				},
+				{
+					"name": "修改用户名及密码错误2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"\",\"password\":\"\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"用户名为空\"\n}，\n{\n    \"code\": 202,\n    \"msg\": \"密码为空\"\n}，"
+				}
+			]
+		},
+		{
+			"name": "获取聊天室配置",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/chat_room_config",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"chat_room_config"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "成功返回",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/chat_room_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"chat_room_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"data\": {\r\n        \"illegal_words\": [],\r\n        \"is_shut_up\": false,\r\n        \"marquee_config\": {\r\n            \"marquee_content\": \"\",\r\n            \"marquee_show\": true\r\n        }\r\n    },\r\n    \"msg\": \"获取成功\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "修改聊天室配置",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"illegal_words\": [],\r\n        \"is_shut_up\": false,\r\n        \"marquee_config\": {\r\n            \"marquee_content\": \"\",\r\n            \"marquee_show\": true\r\n\r\n        }\r\n\r\n    }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/update_chat_room_config",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"update_chat_room_config"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "参数错误",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"x1\":\"1\"}"
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"请求参数错误\"\n}"
+				},
+				{
+					"name": "修改成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"illegal_words\": [],\r\n        \"is_shut_up\": false,\r\n        \"marquee_config\": {\r\n            \"marquee_content\": \"\",\r\n            \"marquee_show\": true\r\n\r\n        }\r\n\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/update_chat_room_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"update_chat_room_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"msg\": \"修改成功\"\n}"
+				},
+				{
+					"name": "参数根式错误",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"illegal_words\": \"\",\r\n        \"is_shut_up\": false,\r\n        \"marquee_config\": {\r\n            \"marquee_content\": \"\",\r\n            \"marquee_show\": true\r\n\r\n        }\r\n\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/update_chat_room_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"update_chat_room_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"illegal_words不是一个list格式\"\n}"
+				}
+			]
+		},
+		{
+			"name": "群组列表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8089/get_chat_config",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"get_chat_config"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "成功饭返回",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8089/get_chat_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"get_chat_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "更新群组列表",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"chat_spider_config\":[]}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/update_chat_config",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"update_chat_config"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "更新群组 成功",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"chat_spider_config\":[]}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/update_chat_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"update_chat_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "参数格式错误",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"chat_spider_config\":\"\"}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/update_chat_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"update_chat_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 202,\r\n    \"msg\": \"chat_spider_config不是一个list格式\"\r\n}"
+				},
+				{
+					"name": "参数错误",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"x\":\"\"}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/update_chat_config",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"update_chat_config"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"msg\": \"请求参数错误\"\n}"
+				}
+			]
+		},
+		{
+			"name": "查询某一聊天室最近的消息",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"chat_username\":\"BetU_DSJC\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询某一聊天室所有的历史记录",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"chat_username\":\"BetU_DSJC\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/messages",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "聊天室用户名不存在返回",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"chat_username\":\"xxx\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/messages",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 400,\r\n    \"msg\": \"chat_username不存在\"\r\n}"
+				},
+				{
+					"name": "成功返回",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"chat_username\":\"BetU_DSJC\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/messages",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": [\n        \"{'_id': ObjectId('62860848efddf13e74e0194f'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：701 U (53/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87786 U (875) 出55894 U (440) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：20 U\\\\n🖋 区块高度：40799084\\\\n📝 区块哈希：000****f92b27b\\\\n🥇 竞猜结果：输(单:7)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 17:00:45', 'msg_time': '2022-05-19 17:03:23'}\",\n        \"{'_id': ObjectId('62860848efddf13e74e01950'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：563 U (52/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87766 U (874) 出56052 U (440) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：80 U\\\\n🖋 区块高度：40799071\\\\n📝 区块哈希：000****6e88c4e\\\\n🥇 竞猜结果：赢(双:4)\\\\n💵 发放金额：158.4 U\\\\n\\\\n(9/32) 2022/05/19 17:00:06', 'msg_time': '2022-05-19 17:02:43'}\",\n        \"{'_id': ObjectId('62860848efddf13e74e01951'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：643 U (51/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87686 U (873) 出56087 U (437) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：40 U\\\\n🖋 区块高度：40799063\\\\n📝 区块哈希：000****0936277\\\\n🥇 竞猜结果：输(单:7)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 16:59:42', 'msg_time': '2022-05-19 17:02:19'}\",\n        \"{'_id': ObjectId('62860848efddf13e74e01952'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：2 U (133/8)\\\\nTH5cNucKCoQXkuamVGaQNqMrGpChqsXz2p\\\\n🏠 入87686 U (872) 出56087 U (437) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：80 U\\\\n🖋 区块高度：40799061\\\\n📝 区块哈希：000****fc317c5\\\\n🥇 竞猜结果：输(单:5)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 16:59:36', 'msg_time': '2022-05-19 17:02:14'}\",\n        \"{'_id': ObjectId('62860916cc29b08f71103990'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：1600 U (152/5)\\\\nTJzdgJXueaCaoJfyvh1AXohBMG3Azrr2iC\\\\n🏠 入87861 U (876) 出55894 U (441) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：75 U\\\\n🖋 区块高度：40799198\\\\n📝 区块哈希：000****cabbdf9\\\\n🥇 竞猜结果：赢(单:9)\\\\n💵 发放金额：148.5 U\\\\n\\\\n(9/32) 2022/05/19 17:06:27', 'msg_time': '2022-05-19 17:06:33'}\"\n    ],\n    \"msg\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "查询某一聊天室 分 页查询",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"page\":1,\r\n    \"size\":10,\r\n    \"chat_username\":\"BetU_DSJC\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/messages_page_size",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"messages_page_size"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "查询某一聊天室 分页查询 成功",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\":1,\r\n    \"size\":10,\r\n    \"chat_username\":\"BetU_DSJC\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/messages_page_size",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"messages_page_size"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 200,\r\n    \"data\": [\r\n        \"{'_id': ObjectId('62860848efddf13e74e0194f'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：701 U (53/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87786 U (875) 出55894 U (440) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：20 U\\\\n🖋 区块高度：40799084\\\\n📝 区块哈希：000****f92b27b\\\\n🥇 竞猜结果：输(单:7)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 17:00:45', 'msg_time': '2022-05-19 17:03:23'}\",\r\n        \"{'_id': ObjectId('62860848efddf13e74e01950'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：563 U (52/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87766 U (874) 出56052 U (440) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：80 U\\\\n🖋 区块高度：40799071\\\\n📝 区块哈希：000****6e88c4e\\\\n🥇 竞猜结果：赢(双:4)\\\\n💵 发放金额：158.4 U\\\\n\\\\n(9/32) 2022/05/19 17:00:06', 'msg_time': '2022-05-19 17:02:43'}\",\r\n        \"{'_id': ObjectId('62860848efddf13e74e01951'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：643 U (51/1)\\\\nTD9vPvL9grWcvLeHzYmZuCmW5V1ZQVFCg8\\\\n🏠 入87686 U (873) 出56087 U (437) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：40 U\\\\n🖋 区块高度：40799063\\\\n📝 区块哈希：000****0936277\\\\n🥇 竞猜结果：输(单:7)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 16:59:42', 'msg_time': '2022-05-19 17:02:19'}\",\r\n        \"{'_id': ObjectId('62860848efddf13e74e01952'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：2 U (133/8)\\\\nTH5cNucKCoQXkuamVGaQNqMrGpChqsXz2p\\\\n🏠 入87686 U (872) 出56087 U (437) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：80 U\\\\n🖋 区块高度：40799061\\\\n📝 区块哈希：000****fc317c5\\\\n🥇 竞猜结果：输(单:5)\\\\n💵 发放金额：0 U\\\\n\\\\n(9/32) 2022/05/19 16:59:36', 'msg_time': '2022-05-19 17:02:14'}\",\r\n        \"{'_id': ObjectId('62860916cc29b08f71103990'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：1600 U (152/5)\\\\nTJzdgJXueaCaoJfyvh1AXohBMG3Azrr2iC\\\\n🏠 入87861 U (876) 出55894 U (441) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：75 U\\\\n🖋 区块高度：40799198\\\\n📝 区块哈希：000****cabbdf9\\\\n🥇 竞猜结果：赢(单:9)\\\\n💵 发放金额：148.5 U\\\\n\\\\n(9/32) 2022/05/19 17:06:27', 'msg_time': '2022-05-19 17:06:33'}\",\r\n        \"{'_id': ObjectId('628609cacc29b08f71103991'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：1700 U (153/5)\\\\nTJzdgJXueaCaoJfyvh1AXohBMG3Azrr2iC\\\\n🏠 入87910 U (877) 出55745 U (442) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：49 U\\\\n🖋 区块高度：40799270\\\\n📝 区块哈希：000****81ac4b5\\\\n🥇 竞猜结果：赢(单:5)\\\\n💵 发放金额：97.02 U\\\\n\\\\n(9/32) 2022/05/19 17:10:03', 'msg_time': '2022-05-19 17:10:09'}\",\r\n        \"{'_id': ObjectId('62860a7ecc29b08f71103992'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：1700 U (154/5)\\\\nTJzdgJXueaCaoJfyvh1AXohBMG3Azrr2iC\\\\n🏠 入88007 U (878) 出55648 U (443) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：97 U\\\\n🖋 区块高度：40799344\\\\n📝 区块哈希：000****48eb1dc\\\\n🥇 竞猜结果：赢(单:1)\\\\n💵 发放金额：192.06 U\\\\n\\\\n(9/32) 2022/05/19 17:13:45', 'msg_time': '2022-05-19 17:13:51'}\",\r\n        \"{'_id': ObjectId('62860b32cc29b08f71103993'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：400 U (3/3)\\\\nTDggxEEyX1hU2GcNbauyPjQqnVmsD7qt9K\\\\n🏠 入88236 U (881) 出55117 U (446) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：58 U\\\\n🖋 区块高度：40799418\\\\n📝 区块哈希：000****635a402\\\\n🥇 竞猜结果：赢(双:2)\\\\n💵 发放金额：114.84 U\\\\n\\\\n(9/33) 2022/05/19 17:17:27', 'msg_time': '2022-05-19 17:17:32'}\",\r\n        \"{'_id': ObjectId('62860b32cc29b08f71103994'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：300 U (2/3)\\\\nTDggxEEyX1hU2GcNbauyPjQqnVmsD7qt9K\\\\n🏠 入88178 U (880) 出55276 U (445) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：80 U\\\\n🖋 区块高度：40799396\\\\n📝 区块哈希：000****7ee494e\\\\n🥇 竞猜结果：赢(双:4)\\\\n💵 发放金额：158.4 U\\\\n\\\\n(9/33) 2022/05/19 17:16:21', 'msg_time': '2022-05-19 17:16:27'}\",\r\n        \"{'_id': ObjectId('62860b32cc29b08f71103995'), 'user_id': 750634, 'user_name': '昵称750634', 'msg': '🔥🔥🔥 BetU 单双竞猜 🔥🔥🔥\\\\n\\\\n🎲 玩家地址：200 U (1/3)\\\\nTDggxEEyX1hU2GcNbauyPjQqnVmsD7qt9K\\\\n🏠 入88098 U (879) 出55456 U (444) \\\\nTDWh1p1utvV2XAoajtcUoiiZvgLav51111 \\\\n(庄家单双地址 点击👆即可复制) \\\\n\\\\n💰 竞猜金额：91 U\\\\n🖋 区块高度：40799367\\\\n📝 区块哈希：000****4f2d5fa\\\\n🥇 竞猜结果：赢(单:5)\\\\n💵 发放金额：180.18 U\\\\n\\\\n(9/32) 2022/05/19 17:14:54', 'msg_time': '2022-05-19 17:14:59'}\"\r\n    ],\r\n    \"msg\": \"success\"\r\n}"
+				},
+				{
+					"name": "查询某一聊天室 分 页查询 失败",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"page\":1,\r\n    \"size\":\"10\",\r\n    \"chat_username\":\"BetU_DSJC\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/messages_page_size",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"messages_page_size"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"code\": 400,\r\n    \"msg\": \"size必须为int\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "用户信息",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8089/user_info",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"user_info"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "成功返回",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8089/user_info",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"user_info"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"81696\": {\n            \"login_ip\": \"192.168.123.203\",\n            \"login_time:\": \"2022-05-19 15:16:15\",\n            \"msg_time\": \"2022-05-19 15:16:15\",\n            \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47\",\n            \"user_id\": 81696,\n            \"user_name\": \"昵称81696\"\n        },\n        \"199056\": {\n            \"login_time\": \"2022-05-19 19:02:18\",\n            \"msg_time\": \"2022-05-19 19:02:18\",\n            \"user_agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/101 Version/11.1.1 Safari/605.1.15\",\n            \"user_id\": 199056,\n            \"user_ip\": \"192.168.123.238\",\n            \"user_name\": \"昵称\"\n        },\n        \"405337\": {\n            \"login_time\": \"2022-05-19 16:27:11\",\n            \"msg_time\": \"2022-05-19 16:27:11\",\n            \"user_agent\": \"Mozilla/5.0 (Linux; Android 9; Mi Note 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.61 Mobile Safari/537.36\",\n            \"user_id\": 405337,\n            \"user_ip\": \"192.168.123.208\",\n            \"user_name\": \"昵称\"\n        },\n        \"750634\": {\n            \"login_ip\": \"127.0.0.1\",\n            \"login_time:\": \"2022-05-19 15:16:17\",\n            \"msg_time\": \"2022-05-20 04:34:08\",\n            \"user_agent\": \"python-requests/2.27.1\",\n            \"user_id\": 750634,\n            \"user_name\": \"昵称750634\"\n        },\n        \"810425\": {\n            \"login_ip\": \"192.168.123.203\",\n            \"login_time:\": \"2022-05-19 15:16:15\",\n            \"msg_time\": \"2022-05-19 18:49:57\",\n            \"user_agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36\",\n            \"user_id\": 810425,\n            \"user_name\": \"昵称810425\"\n        }\n    },\n    \"msg\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "删除消息",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"chat_username\":\"BetU_DSJC\",\"_id\":\"62860848efddf13e74e0194f\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8089/delete_message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8089",
+					"path": [
+						"delete_message"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "参数为空",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"chat_username\":\"BetU_DSJC\"}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/delete_message",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"delete_message"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

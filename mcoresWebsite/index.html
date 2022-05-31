@@ -1,0 +1,939 @@
+<!doctype html>
+
+<html class="no-js" lang="en-us">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title></title>
+
+	<meta name="keywords" content="Corporate Business Shopse HTML5 Css3 Template App Product">
+
+	<meta name="description" content="Apork - Product Landing HTML5 Template">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+	<!-- css here -->
+
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="static/css/meanmenu.css">
+
+	<link rel="stylesheet" href="static/css/animate.min.css">
+
+	<link rel="stylesheet" href="static/css/magnific-popup.css">
+
+	<link rel="stylesheet" href="static/css/fontawesome-all.min.css">
+
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+
+	<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+
+	<link rel="stylesheet" href="static/css/scrolltop.css">
+
+	<link rel="stylesheet" href="static/css/default.css">
+
+	<link rel="stylesheet" href="static/css/style.css">
+
+	<link rel="stylesheet" href="static/css/responsive.css">
+
+	<link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+
+	<style>
+		.modal {
+
+			display: none;
+
+			position: fixed;
+
+			z-index: 999999;
+
+			left: 0;
+
+			top: 0;
+
+			width: 100%;
+
+			height: 100%;
+
+			overflow: auto;
+
+			background-color: rgb(0, 0, 0);
+
+			background-color: rgba(0, 0, 0, 0.4);
+
+		}
+
+
+
+
+
+		.modal-content {
+
+			background-color: #fefefe;
+
+			margin: 50px auto 0 auto;
+
+			padding: 20px;
+
+			border: 1px solid #888;
+
+			width: 80%;
+
+			border-radius: 10px;
+
+		}
+
+
+
+
+
+		.close {
+
+			color: #aaa;
+
+			float: right;
+
+			font-size: 28px;
+
+			font-weight: bold;
+
+		}
+
+
+
+		.close:hover,
+		.close:focus {
+
+			color: black;
+
+			text-decoration: none;
+
+			cursor: pointer;
+
+		}
+
+
+
+		.yy {}
+
+
+
+		.yybtn {
+
+			border-radius: 200px;
+
+			margin-bottom: 5px;
+
+			width: 100%;
+
+			padding: 10px 0;
+
+			background: #fff;
+
+			border: solid 1px #666;
+
+		}
+
+
+
+		.Language {
+
+			width: 50px;
+
+			height: 50px;
+
+			position: fixed;
+
+			right: 20px;
+
+			top: 20px;
+
+			z-index: 999999;
+
+			background: url(static/image/yy.png) no-repeat #fff center;
+
+			background-size: 30px;
+
+			border-radius: 50px;
+
+		}
+	</style>
+
+	<!-- 打开弹窗按钮 -->
+
+	<button id="myBtn" class="Language">
+
+	</button>
+
+	<!-- 弹窗 -->
+
+	<div id="myModal" class="modal">
+
+		<!-- 弹窗内容 -->
+
+		<div class="modal-content close2">
+
+			<!-- <span class="close">&times;</span> -->
+
+			<div id="language-list" class="yy">
+
+				<!-- <button class="translate yybtn" id="en">English</button>
+
+					<button class="translate yybtn" id="zh">中文简体</button>
+
+					<button class="translate yybtn" id="tw">中文繁体</button>
+
+					<button class="translate yybtn" id="vi">ViệtName</button>
+
+					<button class="translate yybtn" id="th">ภาษาไทย</button>
+
+					<button class="translate yybtn" id="jp">日本語</button>
+
+					<button class="translate yybtn" id="kr">한국어</button>
+
+					<button class="translate yybtn" id="fr">français</button>
+
+					<button class="translate yybtn" id="de">Deutsche</button>
+
+					<button class="translate yybtn" id="es">Español</button>
+
+					<button class="translate yybtn" id="pt">português</button>
+
+					<button class="translate yybtn" id="ru">русский</button>
+
+					<button class="translate yybtn" id="be">Белорусский</button> -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!--[if lte ie 9]>
+
+            <p class="browserupgrade">you are using an <strong>outdated</strong> browser. please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+
+	<![endif]-->
+
+	<!-- preloaders start -->
+
+	<div class="preloader">
+
+		<div class="loader">
+
+			Loading...</div>
+
+	</div>
+
+	<!-- preloaders end -->
+
+	<!-- header area start -->
+
+	<header>
+
+		<!-- header area start -->
+
+		<div class="header-area">
+
+			<div class="container">
+
+				<div class="row">
+
+					<!-- logo start -->
+
+					<div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 d-flex align-items-center">
+
+						<div class="header-logo" style="margin-top: 0px">
+
+							<a href=""><img id="logo" alt="logo" class="img-fluid" style="max-width:150px;"></a>
+
+						</div>
+
+					</div>
+
+					<!-- main menu area start -->
+
+					<div class="col-xl-10 col-lg-10 col-md-10 col-sm-9 pb-20">
+
+
+
+						<div class="header-top-right float-right">
+
+							<!-- <ul class="header-search">
+
+									<li><a id="search-btn" href="#"><i class="fa fa-search"></i></a></li>
+
+								</ul> -->
+
+
+
+							<div class="header-top-btn">
+
+								<a href="/login/reg.html" class="btn btn-type-1 lang" key="reg">Loading...</a>
+
+								<a href="#" class="btn btn-type-1 lang down-app" key="app">Loading...</a>
+
+							</div>
+
+						</div>
+
+						<div class="main-menu-area float-right">
+
+							<div class="main-menu">
+
+
+
+							</div>
+
+						</div>
+
+						<div class="mobile-menu"></div>
+
+					</div>
+
+					<!-- main menu area end -->
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- search form end -->
+
+	</header>
+
+	<!-- header area end -->
+
+	<!-- main area start -->
+
+	<main>
+
+		<!-- hero area start -->
+
+		<div id="appnox-hero" class="appnox-hero-area hero-bg position-relative">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xl-7 col-lg-8 col-md-12">
+
+						<div class="hero-content">
+
+							<h2 class="lang" key="banner1"></h2>
+
+							<p class="lang" key="banner2">
+
+							</p>
+
+							<div class="hero-btn">
+
+								<a href="/login/reg.html" class="btn btn-type-2 lang" key="reg"></a>
+
+								<a href="#l" class="btn btn-type-3 lang down-app" key="app"></a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="hero-mobile-img wow fadeInRight">
+
+						<img src="static/picture/img_intro.86f01e19.png" alt="">
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- hero area end -->
+
+		<!-- services area start -->
+
+		<div id="appnox-services-area" class="appnox-services-area position-relative mt-100 mb-100">
+
+			<div class="container">
+
+
+
+				<div class="row text-center">
+
+
+
+					<div class="col-xl-4 col-lg-4 col-md-4 wow fadeInLeft">
+
+						<div class="single-services position-relative">
+
+							<div class="single-services-content">
+
+								<img src="static/picture/icon-1.png" alt="">
+
+								<h3 class="lang" key="ffdjy"></h3>
+
+								<p class="lang" key="zc30z"></p>
+
+							</div>
+
+							<div class="services-shape">
+
+								<img class="style-shape shape-1" src="static/picture/icon-1-1.png" alt="">
+
+								<img class="style-shape shape-2" src="static/picture/shape-11.png" alt="">
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="col-xl-4 col-lg-4 col-md-4 wow fadeInUp">
+
+						<div class="single-services position-relative">
+
+							<div class="single-services-content">
+
+								<img src="static/picture/icon-2.png" alt="">
+
+								<h3 class="lang" key="dzszzc"></h3>
+
+								<p class="lang" key="wdbhy"></p>
+
+							</div>
+
+							<div class="services-shape">
+
+								<img class="style-shape shape-1" src="static/picture/icon-1-2.png" alt="">
+
+								<img class="style-shape shape-2" src="static/picture/shape-21.png" alt="">
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="col-xl-4 col-lg-4 col-md-4 wow fadeInRight">
+
+						<div class="single-services position-relative">
+
+							<div class="single-services-content">
+
+								<img src="static/picture/icon-3.png" alt="">
+
+								<h3 class="lang" key="gldx"></h3>
+
+								<p class="lang" key="yhynjc"></p>
+
+							</div>
+
+							<div class="services-shape">
+
+								<img class="style-shape shape-1" src="static/picture/icon-1-3.png" alt="">
+
+								<img class="style-shape shape-2" src="static/picture/shape-31.png" alt="">
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- services area end -->
+
+		<!-- about area start -->
+
+		<div id="appnox-about-area" class="appnox-about-area pt-100 mb-100">
+
+			<div class="appnox-about-img wow fadeInLeft">
+
+				<img src="static/picture/about-1.png" alt="">
+
+			</div>
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-12">
+
+						<div class="section-title">
+
+							<h3 class="lang" key="hyjy"></h3>
+
+							<p class="lang" key="sskk"></p>
+
+						</div>
+
+						<div class="about-counter-area">
+
+							<div class="container">
+
+								<div class="row">
+
+									<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp">
+
+										<div class="about-single-counter">
+
+											<h2 class="counter">5000</h2>
+
+											<span>happy clients</span>
+
+											<div class="counter-shape">
+
+												<img src="static/picture/shape-1.png" alt="">
+
+											</div>
+
+										</div>
+
+									</div>
+
+
+
+									<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp">
+
+										<div class="about-single-counter">
+
+											<h2 class="counter">10000</h2>
+
+											<span>trusted users</span>
+
+											<div class="counter-shape">
+
+												<img src="static/picture/shape-2.png" alt="">
+
+											</div>
+
+										</div>
+
+									</div>
+
+
+
+									<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp">
+
+										<div class="about-single-counter">
+
+											<h2 class="counter">100</h2>
+
+											<span>projects done</span>
+
+											<div class="counter-shape">
+
+												<img src="static/picture/shape-3.png" alt="">
+
+											</div>
+
+										</div>
+
+									</div>
+
+
+
+									<div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp">
+
+										<div class="about-single-counter">
+
+											<h2 class="counter">92</h2>
+
+											<span>conversion rates</span>
+
+											<div class="counter-shape">
+
+												<img src="static/picture/shape-4.png" alt="">
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+
+
+						</div>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- faq area start -->
+
+		<div id="appnox-faq-area" class="appnox-faq-area mt-100 mb-100">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xl-6 col-lg-12 col-md-10 mx-auto">
+
+						<div class="section-title text-center mb-80">
+
+							<h3 class="lang" key="bbjy">Loading...</h3>
+
+							<p class="lang" key="ylbbjy">Loading...</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-xl-6 col-lg-6 col-md-12 wow fadeInLeft">
+
+						<div class="appnox-accordion-wrapper">
+
+							<div class="accordion" id="accordionExample">
+
+								<div class="card">
+
+									<div class="card-header" id="headingOne">
+
+										<h2 class="mb-0">
+
+											<a class="btn btn-link lang" href="#" data-toggle="collapse"
+												data-target="#collapseOne" aria-expanded="true"
+												aria-controls="collapseOne" key="lxdldx">
+
+												Loading...
+
+											</a>
+
+										</h2>
+
+									</div>
+
+
+
+									<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+										data-parent="#accordionExample">
+
+										<div class="card-body">
+
+											<p class="lang" key="tg100">Loading...</p>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header" id="headingTwo">
+
+										<h2 class="mb-0">
+
+											<a class="btn btn-link collapsed lang" href="#" data-toggle="collapse"
+												data-target="#collapseTwo" aria-expanded="false"
+												aria-controls="collapseTwo" key="tgdzy">
+
+												Loading...
+
+											</a>
+
+										</h2>
+
+									</div>
+
+									<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+										data-parent="#accordionExample">
+
+										<div class="card-body">
+
+											<p class="lang" key="tgzl">Loading...</p>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header" id="headingThree">
+
+										<h2 class="mb-0">
+
+											<a class="btn btn-link collapsed lang" href="#" data-toggle="collapse"
+												data-target="#collapseThree" aria-expanded="false"
+												aria-controls="collapseThree" key="jycb">
+
+												Loading...
+
+											</a>
+
+										</h2>
+
+									</div>
+
+									<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+										data-parent="#accordionExample">
+
+										<div class="card-body">
+
+											<p class="lang" key="jyjjx">Loading...</p>
+
+										</div>
+
+									</div>
+
+								</div>
+
+
+
+								<div class="card">
+
+									<div class="card-header" id="headingfour">
+
+										<h2 class="mb-0">
+
+											<a class="btn btn-link collapsed lang" href="#" data-toggle="collapse"
+												data-target="#headingFour" aria-expanded="false"
+												aria-controls="headingFour" key="dyhgn">
+
+												Loading...
+
+											</a>
+
+										</h2>
+
+									</div>
+
+									<div id="headingFour" class="collapse" aria-labelledby="headingfour"
+										data-parent="#accordionExample">
+
+										<div class="card-body">
+
+											<p class="lang" key="bhzdy">Loading...</p>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-xl-6 col-lg-6 col-md-12 wow fadeInRight">
+
+						<div class="faq-img"><img src="static/picture/faqs-1.png" alt=""></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!-- footer area start -->
+
+		<footer id="appnox-footer-area" class="appnox-footer-area pt-250">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+
+						<div class="footer-widget widget-1">
+
+							<div class="footer-logo text-center">
+
+
+
+							</div>
+
+
+
+
+
+						</div>
+
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+			</div>
+
+		</footer>
+
+		<!-- footer area end -->
+
+	</main>
+
+	<!-- main area end -->
+
+	<!-- scrolltop button -->
+
+	<div class="material-scrolltop">
+
+	</div>
+
+	<!-- js here -->
+
+	<script src="static/js/modernizr-3.5.0.min.js"></script>
+
+	<script src="static/js/jquery-1.12.4.min.js"></script>
+
+	<script src="static/js/popper.min.js"></script>
+
+	<script src="static/js/bootstrap.min.js"></script>
+
+	<script src="static/js/meanmenu.min.js"></script>
+
+	<script src="static/js/magnific-popup.min.js"></script>
+
+	<script src="static/js/owl.carousel.min.js"></script>
+
+	<script src="static/js/waypoints.min.js"></script>
+
+	<script src="static/js/counterup.min.js"></script>
+
+	<script src="static/js/scrolltop.js"></script>
+
+	<script src="static/js/ajax-form.js"></script>
+
+	<script src="static/js/wow.min.js"></script>
+
+	<script src="static/js/plugins.js"></script>
+
+	<script src="static/js/main.js"></script>
+
+	<script src="static/js/crypto-js.js"></script>
+
+	<script src="static/js/config.js"></script>
+
+	<script src="static/lan/language.js"></script>
+
+	<script src="static/js/common.js"></script>
+
+
+	<script type="text/javascript">
+
+
+
+		var modal = document.getElementById('myModal');
+
+
+
+
+
+		var btn = document.getElementById("myBtn");
+
+
+
+
+
+		var span = document.querySelector('.close');
+
+		var span = document.querySelector('.close2');
+
+
+
+
+
+		btn.onclick = function () {
+
+			modal.style.display = "block";
+
+		}
+
+
+
+
+
+		span.onclick = function () {
+
+			modal.style.display = "none";
+
+		}
+
+
+
+
+
+		window.onclick = function (event) {
+
+			if (event.target == modal) {
+
+				modal.style.display = "none";
+
+			}
+
+		}
+
+	</script>
+
+</body>
+
+</html>

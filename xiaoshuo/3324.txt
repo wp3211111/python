@@ -1,0 +1,8 @@
+function Hx(t) {
+        var e = Fx().parse("D0CD8B760CE07BC3")
+            , n = Fx().parse("2011121211143000")
+            , r = Mx.encode(t);
+        return Ux().decrypt(r, e, {
+            iv: n
+        }).toString(Fx()).replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    }

@@ -1,0 +1,12 @@
+APScheduler==3.6.3
+Flask==2.1.1
+Flask_Cors==3.0.10
+Flask_Docs==0.6.3
+Flask_JWT_Extended==4.4.0
+Flask_SocketIO==5.1.2
+gevent_socketio==0.3.6
+pymongo==4.1.1
+Pyrogram==1.4.16
+redis==4.3.1
+python-engineio==3.11.2
+python-socketio==4.4.0

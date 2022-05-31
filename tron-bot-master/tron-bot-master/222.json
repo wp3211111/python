@@ -1,0 +1,3 @@
+'supergroup_chat_created': False, 'entities': [], 'caption_entities': [], 'date': 1651111394, 'photo': [], 'text': '都打', 'channel_chat_created': False, 'delete_chat_photo': False, 'new_chat_members': [], 'new_chat_photo': [], 'chat': {'id': -1001756637415, 'type': 'supergroup', 'title': '电报推送'
+}, 'group_chat_created': False, 'message_id': 3, 
+'from': {'is_bot': False, 'id': 2052963358, 'language_code': 'zh-hans', 'username': 'dagege111', 'first_name': 'Abcd'

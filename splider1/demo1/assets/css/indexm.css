@@ -1,0 +1,1111 @@
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-90%);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+  color: var(--app-color);
+  background-color: #121e36ff;
+  background-color: var(--app-background-color);
+  font-family: "Montserrat", "Open Sans", "PingFang SC", "Microsoft YaHei",
+    "Helvetica Neue", "Hiragino Sans GB", "WenQuanYi Micro Hei", Arial,
+    sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  color: unset;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffb01b;
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  border-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #0d1b35 !important;
+}
+.app a.muh {
+  display: block;
+  width: 100%;
+  height: 15.3846vw;
+  background-color: #1d2a43;
+}
+.app a.muh img {
+  height: 15.3846vw;
+  width: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+.app header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #1d2a43;
+}
+.app header .vs,
+.app header .xx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app header .vs {
+  height: 13.3333vw;
+  padding-left: 4.1vw;
+  padding-right: 4.1vw;
+}
+.app header .vs .zo {
+  display: flex;
+}
+.app header .vs .zo a {
+  display: none;
+}
+.app header .vs .zo a:first-child {
+  display: flex;
+  align-items: flex-end;
+}
+.app header .vs .zo a:first-child img {
+  width: 23.8462vw;
+}
+.app header .vs .yz {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.app header .vs .yz a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.1795vw;
+  width: 17.9487vw;
+  margin-right: 4.1026vw;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 3.5897vw;
+}
+.app header .vs .yz .dglu {
+  background: #ffb01b;
+  color: #ffffff;
+}
+.app header .vs .yz .vuce {
+  background: #ffffff;
+  color: #25324b;
+}
+.app header .vs .yz .jin {
+  height: auto;
+  width: 28px;
+  padding: 2px;
+}
+.app header .vs .yz .jin img {
+  width: 28px;
+}
+.app header .vs .yz .yuyj {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+}
+.app header .vs .yz .yuyj img:last-child {
+  display: none;
+}
+.app header .xx .dhqm {
+  border-radius: 8px;
+  color: #ffcc68;
+  background-image: linear-gradient(0deg, #2c4a7ab2 0%, #2c4a7a00 100%);
+}
+.app header .xx .zo,
+.app header .xx .yz {
+  display: flex;
+  align-items: center;
+}
+.app header .xx .zo a,
+.app header .xx .yz a {
+  padding-left: 4.1vw;
+  padding-right: 4.1vw;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 60px;
+  transition: color 0.2s ease-in-out;
+  color: rgba(157, 177, 216, 0.6);
+  white-space: nowrap;
+}
+.app header .xx .zo a.dhqm,
+.app header .xx .zo a:hover,
+.app header .xx .zo a:active,
+.app header .xx .yz a.dhqm,
+.app header .xx .yz a:hover,
+.app header .xx .yz a:active {
+  border-radius: 8px;
+  color: #ffcc68;
+  background-image: linear-gradient(0deg, #2c4a7ab2 0%, #2c4a7a00 100%);
+}
+.app header .xx .zo a.dhqm svg,
+.app header .xx .zo a:hover svg,
+.app header .xx .zo a:active svg,
+.app header .xx .yz a.dhqm svg,
+.app header .xx .yz a:hover svg,
+.app header .xx .yz a:active svg {
+  fill: #ffcc68;
+}
+.app header .xx .zo a svg,
+.app header .xx .zo a span,
+.app header .xx .yz a svg,
+.app header .xx .yz a span {
+  display: none;
+}
+.app header .xx .zo {
+  overflow: auto;
+}
+.app header .xx .yz {
+  display: none;
+}
+.app main {
+  padding-left: 4.1vw;
+  padding-right: 4.1vw;
+}
+.app main .uh {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.app main .uh .zo,
+.app main .uh .yz {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.app main .uh .zo > div,
+.app main .uh .yz > div {
+  margin-top: 6.15vw;
+}
+.app main .uh .zo p:first-child,
+.app main .uh .yz p:first-child {
+  color: #ffffff;
+  font-size: 26px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 16px;
+  font-weight: bold;
+}
+.app main .uh .jpuc {
+  box-sizing: border-box;
+  z-index: 2;
+  height: auto;
+}
+.app main .uh .jpuc p:nth-child(2) {
+  padding-bottom: 6px;
+}
+.app main .uh .jpuc p:nth-child(2),
+.app main .uh .jpuc p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .uh .jpuc img {
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.app main .uh .gvhx .tuwf {
+  overflow: hidden;
+  height: auto;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #103464 0%, #1d2a43 100%);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+.app main .uh .gvhx .tuwf .tu {
+  position: relative;
+  padding: 2.5641vw 10.2564vw;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+  box-sizing: border-box;
+  background: url(https://hx1web.hstax1tic.com/static/media/H5Wheel@3x.a37dfa94.png)
+    no-repeat center;
+  background-size: contain;
+}
+.app main .uh .gvhx .tuwf .tu .tu2,
+.app main .uh .gvhx .tuwf .tu .tu3,
+.app main .uh .gvhx .tuwf .tu .nwrs {
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  width: 80%;
+}
+.app main .uh .gvhx .tuwf .tu .tu2 img,
+.app main .uh .gvhx .tuwf .tu .tu3 img,
+.app main .uh .gvhx .tuwf .tu .nwrs img {
+  width: 100%;
+  transition-duration: 1s;
+  -webkit-animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
+}
+.app main .uh .gvhx .tuwf .tu .nwrs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 82%;
+}
+.app main .uh .gvhx .tuwf .tu .nwrs span {
+  line-height: 24px;
+}
+.app main .uh .gvhx .tuwf .tu .nwrs span:nth-child(1) {
+  color: #ffffff;
+  font-family: "Montserrat-ExtraBold";
+  font-size: 32px;
+}
+.app main .uh .gvhx .tuwf .tu .nwrs span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-family: PingFang SC;
+}
+.app main .uh .gvhx .tuwf .wf {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  padding: 0 6.15vw;
+  left: 0;
+  margin-top: -8.97vw;
+}
+.app main .uh .gvhx .tuwf .wf li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5.1282vw;
+}
+.app main .uh .gvhx .tuwf .wf li:nth-child(1) span {
+  background: rgba(114, 226, 96, 0.2);
+  color: #72e260;
+}
+.app main .uh .gvhx .tuwf .wf li:nth-child(2) span {
+  background: rgba(226, 96, 96, 0.2);
+  color: #e26060;
+}
+.app main .uh .gvhx .tuwf .wf li:nth-child(3) span {
+  background: rgba(226, 174, 96, 0.2);
+  color: #e2ae60;
+}
+.app main .uh .gvhx .tuwf .wf li:nth-child(4) span {
+  background: rgba(96, 164, 226, 0.2);
+  color: #60a4e2;
+}
+.app main .uh .gvhx .tuwf .wf li:nth-child(5) span {
+  background: rgba(200, 96, 226, 0.2);
+  color: #c860e2;
+}
+.app main .uh .gvhx .tuwf .wf li span {
+  border-radius: 8px;
+  height: 7.1795vw;
+  line-height: 7.1795vw;
+  width: 20.51vw;
+  text-align: center;
+  margin-right: 4.1vw;
+  font-family: "Montserrat-ExtraBold";
+  font-size: 14px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.app main .uh .gvhx .tuwf .wf li strong {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  font-weight: normal;
+}
+.app main .uh .xbxi ul {
+  border-radius: 16px;
+  padding: 8.2051vw 6.1538vw;
+  background: #25324b;
+}
+.app main .uh .xbxi ul li {
+  padding-bottom: 5.1282vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.app main .uh .xbxi ul li:nth-child(2) span:nth-child(2),
+.app main .uh .xbxi ul li:last-child span:nth-child(2) {
+  cursor: pointer;
+  position: relative;
+  color: #ffb01b;
+}
+.app main .uh .xbxi ul li:nth-child(2) span:nth-child(2)::after,
+.app main .uh .xbxi ul li:last-child span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../images/link.svg) no-repeat center;
+  background-size: contain;
+}
+.app main .uh .xbxi ul li span:nth-child(1) {
+  width: 96px;
+  color: #9db1d8;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  font-weight: normal;
+}
+.app main .uh .xbxi ul li span:nth-child(2) {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Montserrat-ExtraBold";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .uh .xnhv {
+  height: 250px;
+  padding: 6.1538vw 4.1026vw;
+  border-radius: 16px;
+  overflow: hidden;
+  background: url(../images/hui2.png) no-repeat top center;
+  background-size: 100% 100%;
+  position: relative;
+}
+.app main .uh .xnhv P:nth-child(1) {
+  font-size: 14px;
+  color: #fff;
+  font-family: PingFang SC;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+}
+.app main .uh .xnhv P:nth-child(1) span {
+  color: #ffffff;
+  font-family: PingFang SC;
+  font-weight: semibold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .uh .xnhv P:nth-child(1) strong {
+  color: #ffb01a;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+.app main .uh .xnhv P:nth-child(1) a {
+  position: absolute;
+  bottom: 26px;
+  left: 4.1026vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2.0513vw;
+  padding-right: 2.0513vw;
+  height: 5vw;
+  min-height: 28px;
+  border-radius: 4px;
+  background: #ffb01a;
+  color: #281613;
+  font-family: PingFang SC;
+  font-weight: regular;
+  font-size: 12px;
+  letter-spacing: 0px;
+  text-decoration: underline;
+}
+.app main .uh .xnhv P:nth-child(2) {
+  text-align: left;
+  width: 65%;
+  margin-top: 16px;
+}
+.app main .uh .xnhv P:nth-child(2) span {
+  color: rgba(255, 176, 26, 0.6);
+  font-family: PingFang SC;
+  font-weight: regular;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .uh .xnhv P:nth-child(2) strong {
+  color: rgba(255, 176, 26, 0.6);
+  font-family: Montserrat;
+  font-weight: regular;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .uh .xnhv P:nth-child(3) {
+  margin-top: 16px;
+  color: #ffffffcc;
+  font-family: PingFang SC;
+  font-weight: regular;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .pdhh {
+  width: 100%;
+  padding: 16px 16px;
+  margin-top: 16px;
+  border-radius: 16px;
+  background: linear-gradient(0deg, #6a02f8 0%, #061d5b4c 100%);
+}
+.app main .pdhh > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app main .pdhh > p:first-child {
+  font-size: 30px;
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+}
+.app main .pdhh > p:nth-child(2) {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.app main .pdhh .xx {
+  margin-top: 20px;
+}
+.app main .pdhh .xx .lpbn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 40px;
+}
+.app main .pdhh .xx .lpbn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+}
+.app main .pdhh .xx .lpbn div img {
+  width: 25px;
+  vertical-align: middle;
+}
+.app main .pdhh .xx .tz .lpbn {
+  color: #9e9dd8;
+  height: 36px;
+  line-height: 18px;
+  background-color: rgba(0, 0, 0, 0.2);
+  white-space: pre-line;
+}
+.app main .pdhh .xx .tz .lpbn .hb div {
+  display: flex;
+  flex: 1 1;
+}
+.app main .pdhh .xx .di .lpbn {
+  color: #e5e4ff;
+  height: 40px;
+}
+.app main .pdhh .xx .di .lpbn:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.098);
+}
+.app main .pdhh .xx .di .lpbn .hb {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  flex-direction: column;
+}
+.app main .pdhh .xx .di .lpbn .hb div {
+  flex: 0;
+}
+.app main .pdhh .xx .di .lpbn .hb div:nth-child(1) {
+  font-size: 13px;
+  color: #d2b7ff;
+}
+.app main .tzvu {
+  width: 100%;
+}
+.app main .tzvu p {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.app main .tzvu p::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  background: url(../images/hg.svg) no-repeat center;
+  background-size: cover;
+  z-index: 1;
+}
+.app main .tzvu .xx {
+  flex-direction: column;
+  overflow: hidden;
+}
+.app main .tzvu .xx .lpbn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 68px;
+  width: 100%;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: #192b4d;
+  font-family: PingFang SC;
+  font-weight: regular;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.app main .tzvu .xx .lpbn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
+}
+.app main .tzvu .xx .lpbn div:nth-child(3),
+.app main .tzvu .xx .lpbn div:nth-child(4),
+.app main .tzvu .xx .lpbn div:nth-child(5) {
+  display: none;
+}
+.app main .tzvu .xx .lpbn img {
+  width: 16px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+.app main .tzvu .xx .tz {
+  width: 100%;
+  z-index: 2;
+}
+.app main .tzvu .xx .tz .lpbn {
+  height: 56px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  color: #6688cc;
+}
+.app main .tzvu .xx .di {
+  width: 100%;
+  height: 624px;
+  animation: move 30s 2s linear infinite;
+}
+.app main .tzvu .xx .di .lpbn {
+  color: #b3c4e5;
+}
+.app main .tzvu .xx .di .lpbn:hover,
+.app main .tzvu .xx .di .lpbn:active,
+.app main .tzvu .xx .di .lpbn:focus {
+  background: linear-gradient(0deg, #152a38 40%, #152a38 0, #152a38 40%);
+  border: 1px solid #0e6187;
+}
+.app main .tzvu,
+.app main .ystu,
+.app main .hode,
+.app main .xmlu {
+  margin-top: 2vw;
+}
+.app main .tzvu > p,
+.app main .ystu > p,
+.app main .hode > p,
+.app main .xmlu > p {
+  color: #ffffff;
+  font-weight: semibold;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 2vw;
+  font-weight: bold;
+}
+.app main .tzvu .xx,
+.app main .ystu .xx,
+.app main .hode .xx,
+.app main .xmlu .xx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.app main .tzvu .xx .nwrskk,
+.app main .ystu .xx .nwrskk,
+.app main .hode .xx .nwrskk,
+.app main .xmlu .xx .nwrskk {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 16px;
+  margin-bottom: 4.1026vw;
+  border-radius: 16px;
+  background: #25324b;
+  width: 100%;
+}
+.app main .tzvu .xx .nwrskk:hover,
+.app main .tzvu .xx .nwrskk:focus,
+.app main .tzvu .xx .nwrskk:active,
+.app main .ystu .xx .nwrskk:hover,
+.app main .ystu .xx .nwrskk:focus,
+.app main .ystu .xx .nwrskk:active,
+.app main .hode .xx .nwrskk:hover,
+.app main .hode .xx .nwrskk:focus,
+.app main .hode .xx .nwrskk:active,
+.app main .xmlu .xx .nwrskk:hover,
+.app main .xmlu .xx .nwrskk:focus,
+.app main .xmlu .xx .nwrskk:active {
+  background: #283c63;
+  cursor: pointer;
+}
+.app main .tzvu .xx .nwrskk:hover .vs,
+.app main .tzvu .xx .nwrskk:focus .vs,
+.app main .tzvu .xx .nwrskk:active .vs,
+.app main .ystu .xx .nwrskk:hover .vs,
+.app main .ystu .xx .nwrskk:focus .vs,
+.app main .ystu .xx .nwrskk:active .vs,
+.app main .hode .xx .nwrskk:hover .vs,
+.app main .hode .xx .nwrskk:focus .vs,
+.app main .hode .xx .nwrskk:active .vs,
+.app main .xmlu .xx .nwrskk:hover .vs,
+.app main .xmlu .xx .nwrskk:focus .vs,
+.app main .xmlu .xx .nwrskk:active .vs {
+  color: #ffffff;
+}
+.app main .tzvu .xx .nwrskk:hover .xx,
+.app main .tzvu .xx .nwrskk:focus .xx,
+.app main .tzvu .xx .nwrskk:active .xx,
+.app main .ystu .xx .nwrskk:hover .xx,
+.app main .ystu .xx .nwrskk:focus .xx,
+.app main .ystu .xx .nwrskk:active .xx,
+.app main .hode .xx .nwrskk:hover .xx,
+.app main .hode .xx .nwrskk:focus .xx,
+.app main .hode .xx .nwrskk:active .xx,
+.app main .xmlu .xx .nwrskk:hover .xx,
+.app main .xmlu .xx .nwrskk:focus .xx,
+.app main .xmlu .xx .nwrskk:active .xx {
+  background: linear-gradient(90deg, #69b7f8 0%, #6fa7fa 100%), #ffffff;
+  color: #ffffff;
+}
+.app main .tzvu .xx .nwrskk .uh,
+.app main .ystu .xx .nwrskk .uh,
+.app main .hode .xx .nwrskk .uh,
+.app main .xmlu .xx .nwrskk .uh {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 16px;
+}
+.app main .tzvu .xx .nwrskk .uh span,
+.app main .ystu .xx .nwrskk .uh span,
+.app main .hode .xx .nwrskk .uh span,
+.app main .xmlu .xx .nwrskk .uh span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app main .tzvu .xx .nwrskk .uh span img,
+.app main .ystu .xx .nwrskk .uh span img,
+.app main .hode .xx .nwrskk .uh span img,
+.app main .xmlu .xx .nwrskk .uh span img {
+  width: 32px;
+  margin-right: 6px;
+}
+.app main .tzvu .xx .nwrskk .uh strong,
+.app main .ystu .xx .nwrskk .uh strong,
+.app main .hode .xx .nwrskk .uh strong,
+.app main .xmlu .xx .nwrskk .uh strong {
+  opacity: 0.6;
+  color: #9db1d8cc;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bolder;
+}
+.app main .tzvu .xx .nwrskk .vs,
+.app main .ystu .xx .nwrskk .vs,
+.app main .hode .xx .nwrskk .vs,
+.app main .xmlu .xx .nwrskk .vs {
+  color: #9db1d8;
+  font-size: 14px;
+  line-height: 28px;
+}
+.app main .tzvu .xx .nwrskk .xx,
+.app main .ystu .xx .nwrskk .xx,
+.app main .hode .xx .nwrskk .xx,
+.app main .xmlu .xx .nwrskk .xx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 48px;
+  margin-top: 24px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: #324466;
+  background: linear-gradient(90deg, #69b7f8 0%, #6fa7fa 100%), #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold";
+  font-size: 18px;
+  text-align: center;
+}
+.app main .ystu .xx .zo {
+  width: 100%;
+}
+.app main .ystu .xx .zo .nwrskk {
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+.app main .ystu .xx .zo .nwrskk .ffhs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 24px;
+  width: 100%;
+}
+.app main .ystu .xx .zo .nwrskk .ffhs > div {
+  width: 100%;
+  height: 84px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+.app main .ystu .xx .zo .nwrskk .ffhs > div p:nth-child(1) {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 8px;
+}
+.app main .ystu .xx .zo .nwrskk .ffhs > div p:nth-child(2) {
+  color: #eeb551;
+  font-family: "Montserrat-ExtraBold";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 24px;
+}
+.app main .ystu .xx .zo .nwrskk a {
+  width: 100%;
+}
+.app main .ystu .xx .yz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.app main .hode .xx .nwrskk {
+  position: relative;
+  z-index: 2;
+}
+.app main .hode .xx .nwrskk .xx {
+  align-self: flex-end;
+}
+.app main .hode .xx .nwrskk::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* width: 100%; */
+  height: 140px;
+  background: url(../images/de11.png) no-repeat bottom right;
+  background-size: contain;
+  z-index: 1;
+}
+.app main .hode .xx .nwrskk:nth-child(2)::after {
+  background: url(../images/de12.png) no-repeat bottom right;
+  background-size: contain;
+}
+.app main .hode .xx .nwrskk:nth-child(3) .xx {
+  color: #ffffff;
+  opacity: 0.30000001;
+  cursor: default;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #69b7f8 0%, #6fa7fa 100%);
+}
+.app main .hode .xx .nwrskk:nth-child(3)::after {
+  background: url(../images/de13.png) no-repeat bottom right;
+  background-size: contain;
+}
+.app main .xmlu {
+  margin-bottom: 10vw;
+  width: 100%;
+}
+.app main .xmlu .xx {
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+.app main .xmlu .xx .nwrsq {
+  flex-shrink: 0;
+  width: 90%;
+  height: 380px;
+  background-color: #25324b;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+.app main .xmlu .xx .nwrsq p {
+  margin: 12px 0 26px;
+}
+.app main .xmlu .xx .nwrsq p strong {
+  color: #ffffff;
+  font-family: "Montserrat-ExtraBold";
+  font-size: 24px;
+  padding-right: 6px;
+  font-weight: bold;
+}
+.app main .xmlu .xx .nwrsq p span {
+  color: #8fa1c3;
+  font-family: "Montserrat-ExtraBold";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.app main .xmlu .xx .nwrsq .xx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.app main .xmlu .xx .nwrsq .xx div {
+  margin: 0 !important;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-bottom: 24px;
+  position: relative;
+  padding-left: 33px;
+  color: #ffffff;
+}
+.app main .xmlu .xx .nwrsq .xx div.dis {
+  color: #50607f;
+}
+.app main .xmlu .xx .nwrsq .xx div.dis::after {
+  background: url(../images/q2.svg) no-repeat;
+}
+.app main .xmlu .xx .nwrsq .xx div::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 25px;
+  width: 16px;
+  background: url(../images/q.svg) no-repeat;
+  background-size: contain;
+}
+.app footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #1d2a43;
+  width: 100%;
+}
+.app footer .pc {
+  display: none;
+}
+.app footer .xx p {
+  color: #5f6888;
+  text-align: center;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+}
+.app footer .xx p:nth-child(1) {
+  padding: 0 16px;
+  letter-spacing: 0px;
+}
+.app footer .xx p:nth-child(2) {
+  padding: 8px 0;
+}
+.app footer .mb {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.app footer .mb .uh {
+  width: 100%;
+  cursor: pointer;
+  height: 35px;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: content-box;
+  border-bottom: 1px solid #324466;
+  padding: 8px 0;
+}
+.app footer .mb .uh a {
+  margin-right: 4px;
+}
+.app footer .mb .uh a img {
+  height: 32px;
+}
+.app footer .mb .xx {
+  height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  margin: 8px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app footer .mb .xx a {
+  font-size: 12px;
+  color: #858ca6;
+  font-size: 14px;
+  line-height: 30px;
+}
+.app footer .mb .xx a:last-child {
+  padding-left: 10px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #2f3d58;
+  color: #e3bc80;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: normal;
+}
+.app footer .mb .xx a:last-child::before {
+  content: "";
+  width: 24px;
+  height: 18px;
+  background: url(../images/mf5.svg) no-repeat center;
+  background-size: contain;
+}
+.app .kefu {
+  position: fixed;
+  z-index: 99999;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 32px;
+  color: #000000;
+  background: #ffb833;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: normal;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.app .kefu img {
+  width: 20px;
+}
+.app .kefu span {
+  display: none;
+}

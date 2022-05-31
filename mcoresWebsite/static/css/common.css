@@ -1,0 +1,44 @@
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) { 
+	.hero-content h2
+	{
+		font-size: 24px;
+	}
+    .hero-content p
+	{
+		font-size: 16px;
+	}
+
+    .hero-btn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-type-2 {
+        margin-bottom: 20px;
+    }
+
+    .hero-content .btn {
+        width: 100%;
+    }
+
+    .container h3 {
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 16px !important;
+    }
+
+    .appnox-accordion-wrapper .btn.btn-link {
+        font-size: 18px !important;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .blog-title h3 a {
+        font-size: 18px !important;
+    }
+}
