@@ -47,7 +47,7 @@ password_ele = web.find_element_by_xpath('//*[@id="pass"]')
 img = web.find_element_by_xpath('//*[@id="userone"]/section/form/div[3]/div/img').screenshot_as_png
 
    
-# chaojiying = Chaojiying_Client('wp3211111','wplmh3212424','933718')
+# chaojiying = Chaojiying_Client('wp3211111','','933718')
 # dic = chaojiying.PostPic(img,1902)
 time.sleep(2)
 verify = '1234' #dic['pic_str']
