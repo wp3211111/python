@@ -8,6 +8,7 @@ def fn(name):
 
 
 if __name__ == "__main__":
+    # fn('12332')
     with ThreadPoolExecutor(50) as t:
         for i in range(100):
             t.submit(fn,'name'==f"县城{i}")

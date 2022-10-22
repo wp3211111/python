@@ -53,13 +53,13 @@ username_ele.send_keys('wp3211111')
 password_ele.send_keys("")
 img = web.find_element_by_xpath('//*[@id="userone"]/section/form/div[3]/div/img').screenshot_as_png
 
-base_params = init('wp3211111','','933718')
+base_params = init('wp3211111','','')
 print(img)
-# chaojiying = Chaojiying_Client('wp3211111','','933718')
 # dic = chaojiying.PostPic(img,1902)
 dic = PostPic(base_params,img,1902)
-# chaojiying = Chaojiying_Client('wp3211111','','933718')
+
 # dic = chaojiying.PostPic(img,1902)
+
 time.sleep(2)
 print("dic",dic)
 verify = dic['pic_str']

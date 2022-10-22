@@ -1,0 +1,1193 @@
+<a id="first"></a>
+<div class="block homeVideoBg">
+	<div class="mask">
+		<div class="mainDiv">
+			<div class="img mdiv"></div>
+			<div class="logo mdiv"></div>
+			<div class="maintext">
+				<div class="text">
+					<h1>全球区块链TRC20 — USDT/TRX竞彩平台</h1>
+					<!--<span>公平</span><span>安全</span><span>公开</span>-->
+				</div>
+				<div class="jackpotbox">
+					<h3 class="titlebox">派奖池JACKPOT<span>数据为奖池金额<b>请勿投注</b></span></h3>
+					<ul>
+						<li>
+							<span date-num="91,123,456.00" class="animateNumber" id="usdt-animate"></span><b>USDT</b>
+						</li>
+						<li>
+							<span date-num="91,123,456.00" class="animateNumber" id="trx-animate"></span><b>TRX</b>
+						</li>
+					</ul>
+					<div class="notebox">
+						<span>派奖地址</span>
+						<b>TC9fu6VkM3qK6jq5LdnFfvkZVhhHbN8888</b>
+					</div>
+				</div>
+
+			</div>
+			<div class="img pdiv"></div>
+		</div>
+	</div>
+	<video class="pdiv" src="res/video/home-bg.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+	<video class="mdiv" src="res/video/home-bg-h5.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+</div>
+
+<!--规则-->
+<a id="rule"></a>
+<div class="block ruleDiv">
+	<!--<div class="blockTitle">规则</div>-->
+	<div class="mainDiv">
+		<div class="tabMenus">
+			<ul>
+				<li class="cur"data-type="shuangwei">双尾哈希</li>
+				<li data-type="danshuang">单双哈希</li>
+                                <li data-type="daxiao">大小哈希</li>
+                                <li data-type="niuniu">牛牛哈希</li>
+                                <!-- <li data-type="ddz">斗地主</li> -->
+
+			</ul>
+		</div>
+		<div class="tabBodys">
+			<div class="item ddz">
+				<div class="mainInfo">
+					<div class="qr">
+						<img src="res/images/ddz.png">
+						<span>扫码转账(TRC20/TRX)</span>
+					</div>
+					<div class="text">
+						<h3>必须使用【去中心化钱包】转账</h3>
+						<span id="ddzHashAddress">TW7P52ExHvT782st3CwDF9KYMmy9fp8888</span>
+						<div class="copy"><button id="ddzCopyBut"
+								onclick="copy('#ddzHashAddress','#ddzCopyBut')">一键复制</button></div>
+					</div>
+					<div class="zhuluDiv">
+						<div class="textlist">开奖结果</div>
+						<div class="trendChart" id="zhulu-ddz">
+							<ul></ul>
+						</div>
+						<div class="trendChartOpen"><i>开</i></div>
+					</div>
+				</div>
+				<div class="ruleInfo">
+					<div class="title">
+						<h3>规则</h3><span>斗地主</span>
+					</div>
+					<div class="info">
+						<h3>玩法</h3>
+						<ul class="singleColumn">
+							<li>
+								<div class="left"></div>
+								<div class="right">投注金额是转账金额的十分之一</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">如押注100USDT/TRX，则需要转账1000USDT/TRX</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">区块哈希值(Blockhash)最后3位作为牌面，如：（000***68f46）为牌面，最后一位（6）为地主号码 ,
+                                                                                   倒数第二位是（4）为农民乙号码，倒数第三位是（f）为农民甲号码（玩家为农民）,
+                                                                                  字母为10，转账金额的个位数为【单数是下注农民甲】【双数是下注农民乙】。农民与地主比点数。 </div>
+							</li>
+							<p class="oneLine">
+								<span>赔率:</span>几点胜出赔几倍，同点扣5%手续费退还本金。</p>
+							<p class="oneLine"><span>返奖:</span>中奖后扣除5%手续费后，将剩余奖金和本金返还至原来账户。</p>
+							</li>
+
+						</ul>
+						<div class="limit">
+							<h3>限额</h3>
+							<ul>
+								<li>
+									<p><span>USDT参与数量</span><b>10 - 20000</b></p>
+									<p><span>TRX参与数量</span><b>100 - 200000</b></p>
+									<p><span>赔率</span><b>1.95</b></p>
+								</li>
+								<li>
+									<p>
+										<sapn>说明: </sapn>低于最低金额时，不可参与抽奖且参与金额不进行退回。
+										高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+										仅支持整数币参与抽奖，小数部分将自动忽略。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="examples">
+					<h3>中奖实例</h3>
+					<ul>
+						<li>
+							<i>01</i>
+							<p><label>转账金额</label> <span>1020</span>.03</p>
+                                                        <p><label>投注金额</label> <span>102</span></p>
+							<h5><label>区块哈希值</label> 000****3b<span>e77</span></h5>
+							<h6>地主开奖号码 <span>7</span><br />
+								农民乙开奖号码 <span>7</span><br /></h6>
+							<b><label>开奖结果</label>同点， 未中奖</b>
+							<h4>自动回款 <span>1020*5%=969</span></h4>
+						</li>
+						<li>
+							<i>02</i>
+							<p><label>转账金额</label> <span>1000</span>.23</p>
+                                                        <p><label>投注金额</label> <span>100</span></p>
+							<h5><label>区块哈希值</label> 000****3a<span>263</span></h5>
+							<h6>地主开奖号码 <span>3</span><br />
+								农民乙开奖号码 <span>6</span><br />
+							</h6>
+							<b><label>开奖结果</label><strong>农民乙赢6倍，中奖</strong></b>
+							<h4>自动回款1000+(100*6*5%)=<span>1570</span>
+							</h4>
+						</li>
+						<li>
+							<i>03</i>
+							<p><label>转账金额</label> <span>1051</span>.03</p>
+                                                        <p><label>投注金额</label> <span>105.10</span></p>
+							<h5><label>区块哈希值</label> 000****3bb4<span>2f4</span></h5>
+							<h6>地主开奖号码 <span>4</span><br />
+								农民甲开奖号码 <span>2</span><br /></h6>
+							<b><label>开奖结果</label>地主赢4倍， 未中奖</b>
+							<h4>自动回款 <span>1051-420.40=630.60</span></h4>
+
+						</li>
+						<li>
+							<i>04</i>
+							<p><label>转账金额</label> <span>1015</span></p>
+                                                        <p><label>投注金额</label> <span>101.50</span></p>
+							<h5><label>区块哈希值</label> 000****3a38<span>f28</span></h5>
+							<h6>地主开奖号码 <span>8</span><br />
+								农民甲开奖号码 <span>10</span><br />
+							</h6>
+							<b><label>开奖结果</label><strong>农民甲赢10倍，中奖</strong></b>
+							<h4>自动回款1015+(101.50*10*5%)=<span>1964.25</span>
+							</h4>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item niuniu">
+				<div class="mainInfo">
+					<div class="qr">
+						<img src="res/images/nn.png">
+						<span>扫码转账(TRC20/TRX)</span>
+					</div>
+					<div class="text">
+						<h3>必须使用【去中心化钱包】转账</h3>
+						<span id="niuniuHashAddress">TC1UYjHv4ZvrrrbYbqjsefJMLTbwU77777</span>
+						<div class="copy"><button id="niuniuCopyBut"
+								onclick="copy('#niuniuHashAddress','#niuniuCopyBut')">一键复制</button></div>
+					</div>
+					<div class="zhuluDiv">
+						<div class="textlist">开奖结果</div>
+						<div class="trendChart" id="zhulu-niuniu">
+							<ul></ul>
+						</div>
+						<div class="trendChartOpen"><i>开</i></div>
+					</div>
+				</div>
+				<div class="ruleInfo">
+					<div class="title">
+						<h3>规则</h3><span>牛牛哈希</span>
+					</div>
+					<div class="info">
+						<h3>玩法</h3>
+						<ul class="singleColumn">
+							<li>
+								<div class="left"></div>
+								<div class="right">投注金额是转账金额的十分之一</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">如押注100USDT/TRX，则需要转账1000USDT/TRX</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">区块哈希值(Block
+									hash)最后的5位作为牌面，如：（000***68cba）为牌面，前三位（68c)为庄家号码，后三位(cba)为闲家号码（玩家是闲家），三位数各自相加，字母为10，相加后取个位数。数字1-9依次为牛一至牛九，为0则为牛牛。按牛牛>牛九
+									>牛八....>牛一以此类推</div>
+							</li>
+							<p class="oneLine">
+								<span>赔率:</span>根据结果决定，牛牛为十倍，牛九为九倍，牛八为八倍，牛七为七倍，牛六为六倍，牛五为五倍，牛四为四倍，牛三为三倍，牛二为二倍，牛一为一倍。</p>
+							<p class="oneLine"><span>返奖:</span>中奖后扣除5%手续费后，将剩余奖金和本金返还至原来账户</p>
+							</li>
+
+						</ul>
+						<div class="limit">
+							<h3>限额</h3>
+							<ul>
+								<li>
+									<p><span>USDT参与数量</span><b>10 - 20000</b></p>
+									<p><span>TRX参与数量</span><b>100 - 200000</b></p>
+									<p><span>赔率</span><b>1.95</b></p>
+								</li>
+								<li>
+									<p>
+										<sapn>说明: </sapn>低于最低金额时，不可参与抽奖且参与金额不进行退回。
+										高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+										仅支持整数币参与抽奖，小数部分将自动忽略。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="examples">
+					<h3>中奖实例</h3>
+					<ul>
+						<li>
+							<i>01</i>
+							<p><label>转账金额</label> <span>2800</span>.03</p>
+							<h5><label>区块哈希值</label> 000****<span>98ec7</span></h5>
+							<h6>庄家开奖号码 98e，9+8+10=27 <span>牛七</span><br />
+								闲家开奖号码 ec7, 10+10+7=27 <span>牛七</span><br /></h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统自动回款 <span>2800-2800*5%=2660</span></h4>
+						</li>
+						<li>
+							<i>02</i>
+							<p><label>转账金额</label> <span>2224</span>.03</p>
+							<h5><label>区块哈希值</label> 000****<span>c1e2f</span></h5>
+							<h6>庄家开奖号码 c1e,10+1+10=21 <span>牛一</span><br />
+								闲家开奖号码 e2f,10+2+10=22 <span>牛二</span><br />
+							</h6>
+							<b><label>开奖结果</label><strong>中奖</strong></b>
+							<h4>系统自动回款 2224+（2224X0.2X0.95）=<span>2646.56</span>
+							</h4>
+						</li>
+						<li>
+							<i>03</i>
+							<p><label>转账金额</label> 1051</p>
+							<h5><label>区块哈希值</label> 000****<span>c5e29</span></h5>
+							<h6>庄家开奖号码 c5e,10+5+10=25 <span>牛五</span><br />
+								闲家投注105.1牛一，输5倍525.5
+								闲家开奖号码 e29,10+2+9=21 <span>牛一</span><br /></h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统自动回款 1051-525.5=<span>525.5</span></h4>
+
+						</li>
+						<li>
+							<i>04</i>
+							<p><label>转账金额</label> 1000</p>
+							<h5><label>区块哈希值</label> 000****<span>57aba</span></h5>
+							<h6>庄家开奖号码 57a,5+7+10=22 <span>牛二</span><br />
+								闲家开奖号码 aba,10+10+10=30 <span>牛牛</span><br />
+								闲家投注100牛牛，赢10倍1000，闲赢抽百分之5，赢1000抽50</h6>
+							<b><label>开奖结果</label> <strong>中奖</strong></b>
+							<h4>系统自动派奖 1000+950=<span>1950</span></h4>
+                                                 </li>
+					</ul>
+				</div>
+			</div>
+			<div class="item danshuang">
+				<div class="mainInfo">
+					<div class="qr">
+						<img src="res/images/ds.png">
+						<span>扫码转账(TRC20/TRX)</span>
+					</div>
+					<div class="text">
+						<h3>必须使用【去中心化钱包】转账</h3>
+						<span id="danshuangHashAddress">TRpwDVSY7Ytedu4dZ1Yu4VxNuszU688888</span>
+						<div class="copy"><button id="danshuangCopyBut"
+								onclick="copy('#danshuangHashAddress','#danshuangCopyBut')">一键复制</button></div>
+					</div>
+					<div class="zhuluDiv">
+						<div class="textlist">开奖结果</div>
+						<div class="trendChart" id="zhulu-danshuang">
+							<ul></ul>
+						</div>
+						<div class="trendChartOpen"><i>开</i></div>
+					</div>
+				</div>
+				<div class="ruleInfo">
+					<div class="title">
+						<h3>规则</h3><span>单双哈希</span>
+					</div>
+					<div class="info">
+						<h3>玩法</h3>
+						<ul class="singleColumn">
+							<li>
+								<div class="left"></div>
+								<div class="right">转账金额的个位数和区块哈希值(Block hash)最后的数字（只看数字，不看字母）同为单数或同为双数时，则成功中奖。</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">低于最低金额时，不可参与抽奖且参与金额不进行退回，高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">仅支持整数币参与抽奖，小数部分将自动忽略。</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">中奖后系统10秒内自动返还转账金额1.98倍的同类数字币。（由于区块链技术为了保证资金安全，每笔交易都需记录，防篡改，且全球使用数字币人口庞大，故10秒转账后可能会出现些许延迟到账情况，敬请耐心等待）</div>
+							</li>
+
+						</ul>
+						<div class="limit">
+							<h3>限额</h3>
+							<ul>
+								<li>
+									<p><span>USDT参与数量</span><b>10 - 20000</b></p>
+									<p><span>TRX参与数量</span><b>100 - 200000</b></p>
+									<p><span>赔率</span><b>1.98</b></p>
+								</li>
+								<li>
+									<p>
+										<sapn>说明: </sapn>低于最低金额时，不可参与抽奖且参与金额不进行退回。
+										高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+										仅支持整数币参与抽奖，小数部分将自动忽略。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="examples">
+					<h3>中奖实例</h3>
+					<ul>
+						<li>
+							<i>01</i>
+							<p><label>转账金额</label> 10<span>1</span></p>
+							<h5><label>区块哈希值是</label> 000*****9e<span>3</span>a</h5>
+							<h6>转账金额个位数为<span>单数</span>，区块哈希值忽略字母后的最后一个数字也为<span>单数</span>。</h6>
+							<b><label>开奖结果</label> <strong>中奖</strong></b>
+							<h4>系统自动派奖 </b><span>101*1.98=199.98</span></h4>
+						</li>
+						<li>
+							<i>02</i>
+							<p><label>转账金额</label> 280<span>0</span></p>
+							<h5><label>区块哈希值是</label> 000*****9ec<span>4</span></h5>
+							<h6>转账金额个位数为<span>双数</span>（小数部分会自动忽略），区块哈希值忽略字母后的最后一个数字也为<span>双数</span>。</h6>
+							<b><label>开奖结果</label> <strong>中奖</strong></b>
+							<h4>系统自动派奖<span>2800*1.98=5544</span></h4>
+						</li>
+						<li>
+							<i>03</i>
+							<p><label>转账金额</label> 10<span>5</span></p>
+							<h5><label>区块哈希值是</label> 000*****9e<span>6</span>a</h5>
+							<h6>转账金额个位数<span>单数</span>，区块哈希值忽略字母后的最后一个数字为<span>双数</span>。</h6>
+							<b><label>开奖结果</label> 未中奖 </b>
+							<h4>系统不返还数字币</h4>
+						</li>
+						<li>
+							<i>04</i>
+							<p><label>转账金额</label> 2<span>2</span>.03</p>
+							<h5><label>区块哈希值是</label> 000*****9ec<span>7</span></h5>
+							<h6>转账金额个位数为<span>双数</span>（看个位数，小数会自动忽略）区块哈希值忽略字母后的最后一个数字为<span>单数</span>。</h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统不返还数字币</h4>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item daxiao">
+				<div class="mainInfo">
+					<div class="qr">
+						<img src="res/images/dx.png">
+						<span>扫码转账(TRC20/TRX)</span>
+					</div>
+					<div class="text">
+						<h3>必须使用【去中心化钱包】转账</h3>
+						<span id="daxiaoHashAddress">TSVwoxBcJsjN5x278Der8gKx4TYkS99999</span>
+						<div class="copy"><button id="daxiaoCopyBut"
+								onclick="copy('#daxiaoHashAddress','#daxiaoCopyBut')">一键复制</button></div>
+					</div>
+					<div class="zhuluDiv">
+						<div class="textlist">开奖结果</div>
+						<div class="trendChart" id="zhulu-daxiao">
+							<ul></ul>
+						</div>
+						<div class="trendChartOpen"><i>开</i></div>
+					</div>
+				</div>
+				<div class="ruleInfo">
+					<div class="title">
+						<h3>规则</h3><span>大小哈希</span>
+					</div>
+					<div class="info">
+						<h3>玩法</h3>
+						<ul class="singleColumn">
+							<li>
+								<div class="left"></div>
+								<div class="right">转账金额的个位数和区块哈希值(Block hash)最后的数字（只看数字，不看字母）的数字大小范围一致【0-4小】，【5-9大】，视为中奖。</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">低于最低金额时，不可参与抽奖且参与金额不进行退回，高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">仅支持整数币参与抽奖，小数部分将自动忽略。</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">中奖后系统10秒内自动返还转账金额1.98倍的同类数字币。（由于区块链技术为了保证资金安全，每笔交易都需记录，防篡改，且全球使用数字币人口庞大，故10秒转账后可能会出现些许延迟到账情况，敬请耐心等待）</div>
+							</li>
+						</ul>
+						<div class="limit">
+							<h3>限额</h3>
+							<ul>
+								<li>
+									<p><span>USDT参与数量</span><b>10 - 20000</b></p>
+									<p><span>TRX参与数量</span><b>100 - 200000</b></p>
+									<p><span>赔率</span><b>1.98</b></p>
+								</li>
+								<li>
+									<p>
+										<sapn>说明: </sapn>低于最低金额时，不可参与抽奖且参与金额不进行退回。
+										高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+										仅支持整数币参与抽奖，小数部分将自动忽略。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="examples">
+					<h3>中奖实例</h3>
+					<ul>
+						<li>
+							<i>01</i>
+							<p><label>转账金额</label> 10<span>1</span></p>
+							<h5><label>区块哈希值是</label> 000*****9e<span>3</span>a</h5>
+							<h6>转账金额个位数为<span>小数值</span>，区块哈希值忽略字母后的最后一个数字也为<span>小数值</span>。</h6>
+							<b><label>开奖结果</label> <strong>中奖</strong></b>
+							<h4>系统自动派奖 </b><span>101*1.98=199.98</span></h4>
+						</li>
+						<li>
+							<i>02</i>
+							<p><label>转账金额</label> 288<span>8</span></p>
+							<h5><label>区块哈希值是</label> 000*****9ec<span>7</span></h5>
+							<h6>转账金额个位数为<span>大数值</span>（小数部分会自动忽略），区块哈希值忽略字母后的最后一个数字也为<span>大数值</span>。</h6>
+							<b><label>开奖结果</label> <strong>中奖</strong></b>
+							<h4>系统自动派奖<span>2888*1.98=5718.24</span></h4>
+						</li>
+						<li>
+							<i>03</i>
+							<p><label>转账金额</label> 10<span>5</span></p>
+							<h5><label>区块哈希值是</label> 000*****9e<span>3</span>a</h5>
+							<h6>转账金额个位数<span>大数值</span>，区块哈希值忽略字母后的最后一个数字为<span>小数值</span>。</h6>
+							<b><label>开奖结果</label> 未中奖 </b>
+							<h4>系统不返还数字币</h4>
+						</li>
+						<li>
+							<i>04</i>
+							<p><label>转账金额</label> 2<span>2</span>.03</p>
+							<h5><label>区块哈希值是</label> 000*****9ec<span>7</span></h5>
+							<h6>转账金额个位数为<span>小数值</span>（看个位数，小数会自动忽略）区块哈希值忽略字母后的最后一个数字为<span>大数值</span>。</h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统不返还数字币</h4>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item shuangwei">
+				<div class="mainInfo">
+					<div class="qr">
+						<img src="res/images/sw.png">
+						<span>扫码转账(TRC20/TRX)</span>
+					</div>
+					<div class="text">
+						<h3>必须使用【去中心化钱包】转账</h3>
+						<span id="shuangweiHashAddress">TSzM1mFMGAhjPVotEkZLkvYK5SC3333333</span>
+						<div class="copy"><button id="shuangweiCopyBut"
+								onclick="copy('#shuangweiHashAddress','#shuangweiCopyBut')">一键复制</button></div>
+					</div>
+					<div class="zhuluDiv">
+						<div class="textlist">开奖结果</div>
+						<div class="trendChart" id="zhulu-shuangwei">
+							<ul></ul>
+						</div>
+						<div class="trendChartOpen"><i>开</i></div>
+					</div>
+				</div>
+				<div class="ruleInfo">
+					<div class="title">
+						<h3>规则</h3><span>双尾哈希</span>
+					</div>
+					<div class="info">
+						<h3>玩法</h3>
+						<ul class="singleColumn">
+							<li>
+								<div class="left"></div>
+								<div class="right">转账后,该笔交易生成的区块哈希值(BlockHash),如果最后两位同时包括【数字+字母】或【字母+数字】,则为双尾哈希,将获得奖励,如果最后两位为【数字+数字】或【字母+字母】,则没有获奖。
+								</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">
+									低于最低金额时，不可参与抽奖且参与金额不进行退回，高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+								</div>
+							</li>
+							<li>
+								<li style="display:none;"><div class="left"></div>
+								<div class="right">仅支持整数币参与抽奖，小数部分将自动忽略。</div>
+							</li>
+							<li>
+								<div class="left"></div>
+								<div class="right">中奖后系统10秒内自动返还转账金额1.98倍的同类数字币。（由于区块链技术为了保证资金安全，每笔交易都需记录，防篡改，且全球使用数字币人口庞大，故10秒转账后可能会出现些许延迟到账情况，敬请耐心等待）</div>
+							</li>
+						</ul>
+						<div class="limit">
+							<h3>限额</h3>
+							<ul>
+								<li>
+									<p><span>USDT参与数量</span><b>10 - 20000</b></p>
+									<p><span>TRX参与数量</span><b>100 - 200000</b></p>
+									<p><span>赔率</span><b>1.98</b></p>
+								</li>
+								<li>
+									<p>
+										<sapn>说明: </sapn>低于最低金额时，不可参与抽奖且参与金额不进行退回。
+										高于最高金额时，不可参与抽奖且扣除双倍手续费后退还剩余金额。
+										仅支持整数币参与抽奖，小数部分将自动忽略。
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<div class="examples">
+					<h3>中奖实例</h3>
+					<ul>
+						<li>
+							<i>01</i>
+							<p><label>转账金额</label> <span>100</span></p>
+							<h5><label>区块哈希值</label> 00****327<span>7b</span></h5>
+							<h6>后两位号码<span>7b</span>包含数字和字母</h6>
+							<b><label>开奖结果</label> 中奖</b>
+							<h4>系统自动派奖<span>100*1.98=198</span></h4>
+						</li>
+						<li>
+							<i>02</i>
+							<p><label>转账金额</label> <span>100</span></p>
+							<h5><label>区块哈希值</label> 00****327<span>j8</span></h5>
+							<h6>后两位号码<span>j8</span></h6>
+							<b><label>开奖结果</label> 中奖</b>
+							<h4>系统自动派奖<span>100*1.98=198</span></h4>
+						</li>
+						<li>
+							<i>03</i>
+							<p><label>转账金额</label> <span>100</span></p>
+							<h5><label>区块哈希值</label> 00****327<span>sb</span></h5>
+							<h6>后两位号码<span>sb</span></h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统不返还数字币</h4>
+
+						</li>
+						<li>
+							<i>04</i>
+							<p><label>转账金额</label> <span>100</span></p>
+							<h5><label>区块哈希值</label> 00****327<span>88</span></h5>
+							<h6>后两位号码<span>88</span></h6>
+							<b><label>开奖结果</label> 未中奖</b>
+							<h4>系统不返还数字币</h4>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--流程-->
+<a id="process"></a>
+<div class="block processDiv">
+	<div class="blockTitle">流程</div>
+	<div class="mainDiv">
+		<div class="tabMenus">
+			<ul>
+				<li><span><i>1</i>注册钱包</span></li>
+				<li><span><i>2</i>购买虚拟币</span></li>
+				<li><span><i>3</i>参与转账</span></li>
+				<li><span><i>4</i>自动秒赔</span></li>
+			</ul>
+		</div>
+		<div class="tabBodys">
+			<div class="item">
+				<div class="info animate__animated animate__fadeInLeft">
+					<h3>注册钱包</h3>
+					<span>选择相应平台注册“去中心化钱包”</span><br />去中心化钱包的数据都是区块链上的数据，而中心化钱包的数据则依赖钱包服务商自己的账本
+					<h4>举个例子：</h4>
+					<div class="note">
+						<p>我们在交易所的钱包就是中心化钱包，我们往交易所指定的地址转账，然后交易所在自己的账本上记录了我们的充值记录，此后每做一次充值转账，交易所直接在他的账本上进行记录，这整个过程完全没有发生在区块链上。
+						</p>
+						<span>温馨提示：我们需要注册一个属于自己的去中心化钱包</span>
+					</div>
+				</div>
+				<div class="table animate__animated animate__fadeInRight">
+					<h3>推荐钱包</h3>
+					<div class="list">
+						<table>
+							<tr>
+								<th width="35%">平台</th>
+								<th width="30%">网址</th>
+								<th width="35%">教程</th>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/xinglong.png" alt=""></td>
+								<td><a class="url" href="https://www.360usdt.com/" target="_blank">360usdt.com</a></td>
+								<td><a href="https://www.luckhash.vip/tutorials1.html" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/imtoken.svg" alt=""></td>
+								<td><a class="url" href="https://token.im/" target="_blank">token.im</a></td>
+								<td><a href="https://www.luckhash.vip/0017.html" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/trust.png"></td>
+								<td><a href="https://trustwallet.com/zh_CN/" target="_blank">trustwallet.com</a></td>
+								<td><a href="https://www.luckhash.vip/0015.html" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/wnbit.svg"></td>
+								<td><a href="https://ownbit.io/en/download/" target="_blank">ownbit.io</a></td>
+								<td><a href="https://www.luckhash.vip/0017.html" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/tronlink.png"></td>
+								<td><a href="https://www.tronlink.org/cn/" target="_blank">tronlink.org</a></td>
+								<td><a href="https://tron7010.zendesk.com/hc/en-us/articles/360027090691-How-to-download-TronLink-Chrome-and-create-wallet-"
+										target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/bitpie.svg"></td>
+								<td><a href="https://bitpie.com/" target="_blank">bitpie.com</a></td>
+								<td><a href="https://www.luckhash.vip/0019.html" target="_blank">查看教程</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="info animate__animated animate__fadeInLeft">
+					<h3>购买虚拟币</h3>
+					交易所购买USDT/TRX并划转到【去中心化钱包】
+					<h4>交易流程如下：</h4>
+					<div class="note">
+						<p>(1) 首先要注册交易所账户。</p>
+						<p>(2) 用现金账户中的钱买卖数字货币，就像买卖股票和期货一样。</p>
+						<p>(3) 交易所会将买入请求/卖出请求进行匹配，如果符合要求即成交。</p>
+						<p>(4) 将交易所中购买的USDT / TRX并划转到去中心化钱包。</p>
+					</div>
+				</div>
+				<div class="table animate__animated animate__fadeInRight">
+					<h3>推荐交易所</h3>
+					<div class="list">
+						<table>
+							<tr>
+								<th width="35%">平台</th>
+								<th width="30%">网址</th>
+								<th width="35%">教程</th>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/gate.svg" alt=""></td>
+								<td><a class="url" href="https://gate.io/" target="_blank">gate.io</a></td>
+								<td><a href="https://www.gate.io/cn/help/guide" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/huobi.svg" alt=""></td>
+								<td><a class="url" href="https://huobi.com/" target="_blank">huobi.com</a></td>
+								<td><a href="https://www.huobi.com/support/zh-cn/list/360000010372" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/binance.svg" alt=""></td>
+								<td><a class="url" href="https://binance.io/" target="_blank">binance.io</a></td>
+								<td><a href="https://academy.binance.com/zh/articles/binance-beginner-s-guide" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/okex.png" alt=""></td>
+								<td><a class="url" href="https://okex.com/" target="_blank">okex.com</a></td>
+								<td><a href="https://www.okx.com/support/hc/zh-cn/sections/360000033031-%E6%96%B0%E6%89%8B%E5%BF%85%E8%AF%BB" target="_blank">查看教程</a></td>
+							</tr>
+							<tr>
+								<td><img src="res/images/platform/zb.svg" alt=""></td>
+								<td><a class="url" href="https://zb.com/" target="_blank">zb.com</a></td>
+								<td><a href="https://www.zb.com/help/guides/1" target="_blank">查看教程</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="info animate__animated animate__fadeInLeft">
+					<h3>参与转账</h3>
+					参与抽奖并赢得奖金
+					<h4>抽奖流程如下：</h4>
+					<div class="note">
+						<p>(1) 转账低于最小金额时，不可以参与且不会退回。</p>
+						<p>(2) 转账高于最大金额时，扣除手续费后退回。</p>
+						<p>(3) 仅支持整数币参与抽奖，小数部分自动忽略。</p>
+					</div>
+				</div>
+				<div class="table animate__animated animate__fadeInRight">
+					<div class="img">
+						<img src="res/css/img/headImg.png" />
+						向本平台指定钱包地址<br />
+						按规定金额转账后即成功参与抽奖
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="info animate__animated animate__fadeInLeft">
+					<h3>自动秒赔</h3>
+					快速返还，轻松获奖！
+					<h4>返奖流程如下：</h4>
+					<div class="note">
+						<p>(1) 中奖后系统将在10秒内自动返还对应玩法中奖金额的 USDT/TRX</p>
+						<p>(2) 区块哈希值符合参与游戏的中奖规则，您可以轻松获得的奖励！</p>
+					</div>
+				</div>
+				<div class="table animate__animated animate__fadeInRight">
+					<div class="img">
+						<img src="res/css/img/headImg.png" />
+						中奖后即可获得数字币奖励
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 兑换 -->
+<a id="exchange"></a>
+<div class="block exchangeDiv">
+	<div class="mainDiv">
+		<div class="title">数字币兑换</div>
+		<div class="rate">
+			当前兑换率：<i><span>兑换数量= (接收数量 * 市场价) - 油费</span></i></div>
+		<div class="form">
+			<div class="type">
+				<ul>
+					<li data-type="usdt_to_trx" class="cur">USDT兑换TRX</li>
+					<li data-type="trx_to_usdt">TRX兑换USDT</li>
+				</ul>
+			</div>
+			<div class="input b1"><input type="number"><span>USDT</span></div>
+			<div class="text">兑换</div>
+			<div class="input b2"><input type="number"><span>TRX</span></div>
+			<button>计算</button>
+		</div>
+		<div class="note">
+			<div class="qrInfo">
+				<div class="text">如果您需要使用USDT兑换TRX币或使用TRX币兑换USDT币，可以向下方地址转账，平台将免费在10秒内给您返还同等价值的TRX或USDT币。</div>
+				<div class="qr pdiv"><i></i><span>扫码转账兑换</span></div>
+			</div>
+			<div class="hashInfo">
+				<button id="exchangeCopyBut"
+					onclick="copy('#exchangeHashAddress','#exchangeCopyBut')"><i></i>复制</button>
+				<h4>平台官方兑换地址</h4>
+				<span id="exchangeHashAddress">TSzM1mFMGAhjPVotEkZLkvYK5SC3333333</span>
+			</div>
+			<div class="qr mdiv"><i></i><span>扫码转账兑换</span></div>
+		</div>
+	</div>
+</div>
+
+
+<!--优势-->
+<a id="advantage"></a>
+<div class="block advantageDiv">
+	<div class="blockTitle">优势</div>
+	<div class="mainDiv">
+		<div class="tabMenus">
+			<ul>
+				<li class="fair">公平透明</li>
+				<li class="safe">安全可靠</li>
+				<li class="fast">极简快速</li>
+			</ul>
+		</div>
+		<div class="tabBodys">
+			<div class="item">
+				<h3>公平透明</h3>
+				<ul>
+					<li>我们捍卫每个人享有公平的权利。</li>
+					<li>区块哈希值依托于去中心化的区块链网络随机生成，任何人随时随地都可以在区块链上查询。</li>
+					<li>真正做到平台不可操控数据，所有记录透明有迹可查。</li>
+				</ul>
+			</div>
+			<div class="item">
+				<h3>安全可靠</h3>
+				<ul>
+					<li>我们致力保障客户信息财产安全。</li>
+					<li>无需实名注册，无需绑定任何个人信息。</li>
+					<li>无冻卡风险，无需充值存款。</li>
+					<li>无需提款申请审核。</li>
+					<li>平台资金池随时可查，无需担心平台资金断裂。</li>
+				</ul>
+			</div>
+			<div class="item">
+				<h3>极简快速</h3>
+				<ul>
+					<li>我们追求极简流畅/快速派彩。</li>
+					<li>只需一个【去中心化】数字钱包，即刻参与抽奖。</li>
+					<li>无任何玩法、策略、设备限制，随时随地，随心所欲。</li>
+					<li>中奖后10秒内自动到账，游戏不间断，体验酣畅淋漓。</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--常见问题--->
+<a id="faq"></a>
+<div class="block faqDiv">
+	<div class="blockTitle">常见问题</div>
+	<div class="mainDiv">
+		<div class="list">
+			<ul>
+				<li>
+					<h3><i>Q1</i><label>什么是区块哈希值【Block hash】？</label></h3>
+					<span>区块哈希值是一段数据的DNA,每个区块哈希值都是唯一的、随机的且不可破解的。</span>
+				</li>
+				<li>
+					<h3><i>Q2</i><label>什么是区块链？</label></h3>
+					<span>区块链从本质上讲，它是一个共享数据库，存储于其中的数据或信息。具有不可伪造、全程留痕、可以追溯、公开透明、集体维护等特征。</span>
+				</li>
+				<li>
+					<h3><i>Q3</i><label>中心化钱包？去中心化钱包？ 为什么中心化钱包无法查询转账？</label></h3>
+					<span>举一个例子：您自己的钱包地址是A,您给地址E转入10个USDT/TRX,但您用交易哈希值去查询，只能查询到服务商随机某个账本地址B(或C或D等等）与E的转账。同理E也无法得知这10个USDT/TRX是否是您转出的，因为E只能看见是账本地址B给他转入10个USDT/TRX。这就是为什么中心化钱包无法在区块链上查询真实转账信息。</span>
+				</li>
+				<li>
+					<h3><i>Q4</i><label>为什么我会连续中奖或不中奖？</label></h3>
+					<span>首先连续多次不中奖的是小概率事件（小概率事件定义），其次中奖与不中奖是随机事件，随机事件的发生的频率会处于一个稳定值。
+						在非迭代的情況下，事物出现的概率对每个人來讲是相等的，这个情況下，每个人都是公平的。 同时随机事件会遵大数定律
+						(在实验不变的条件下，重复实验多次，随机事件的频率近似于它的概率大数定律定义），在转账频次不断增加的情况下，中奖与不中奖的概率会处于一个稳定值。所以请您继续转账，随着转账频次增加则中奖总概率会提升。</span>
+				</li>
+				<li>
+					<h3><i>Q5</i><label>为什么会延迟到账？</label></h3>
+					<span>由于区块链技术为了保证资金安全性，会进行多次核算，比对，确认。所以计算速度较慢，但是贵在安全。</span>
+				</li>
+				<li>
+					<h3><i>Q6</i><label>为什么转币时有那么多USDT的类型选项？ 我该选哪一个？</label></h3>
+					<span>全球有许多知名公链都支持进行USDT转账，而幸运哈希是基于波场TRC20技术。所以幸运哈希的转账地址是属于USDT - TRC20，您应该选择USDT -
+						TRC20；如果您选择了其他类型，幸运哈希则无法收到您的USDT， 会造成您和幸运哈希双方的损失。</span>
+				</li>
+				<li>
+					<h3><i>Q7</i><label>转币时转错地址或者选错币的类型，怎么办？ 是否还能找回？</label></h3>
+					<span>比如说您给我们转币时应该选择USDT - TRC20类型，但您选择了其他类型USDT - OMNI或者USDT - ERC20，那么就会出现丢币的情况，这种情况是无法找回的。</span>
+				</li>
+				<li>
+					<h3><i>Q8</i><label>有任何疑问请联系我们</label></h3>
+					<span><a href="#">点击即可联系客服</a></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<script>
+    //绑定兑换表单事件
+    var exchangeType = 'usdt_to_trx';
+	var first_val = "shuangwei";
+	var late = {
+		Late: 0.06,
+		TRXPrice: 0.08017,
+		gasLastTrxUsdtPrice: 0.268,
+		gasUsdtPrice: 0.3561696556,
+	};
+
+	var typeStyles={
+			'danshuang':{
+				'1':{color:'#e16b6b',text:'单'},
+				'2':{color:'#628cc6',text:'双'},
+			},
+			'daxiao':{
+				'1':{color:'#628cc6',text:'小'},
+				'2':{color:'#e16b6b',text:'大'},
+			},
+			'shuangwei':{
+				'1':{color:'#e16b6b',text:'输'},
+				'2':{color:'#628cc6',text:'赢'},
+			},
+			'niuniu':{
+				'1':{color:'#e16b6b',text:'庄'},
+				'2':{color:'#628cc6',text:'闲'},
+				'3':{color:'#e4b14a',text:'和'},
+			}
+		};
+
+	bindExchangeEvent();
+
+	activateRuleTabs();
+
+	activateProcessTabs();
+
+	activateAdvantageTabs();
+
+	activateZhulu();
+
+	loadRate();
+
+	getFindPoolBalance();
+
+
+
+	function appendNum(num,numWarpParent){
+		numArry = num.split('');
+		for(var i = 0; i < numArry.length; i++){
+			var thisNum = numArry[i];
+			var numWarp;
+			if (!isNaN(thisNum)){ //判断是否可以转化为数字
+				numWarp = $('<label class="single-num">' + numArry[i] +'</label>');
+			}else{
+				numWarp = $('<label class="single-point">'+ numArry[i] +'</label>');
+			};
+			numWarpParent.append(numWarp);
+			isAnimate(thisNum,numWarpParent,i);
+		};
+	};
+	function isAnimate(num,numWarpParent,index){
+		if (isNaN(num))return;
+		//调用animate.js插件方法
+		numWarpParent.find('label').eq(index).prop('number', 0).animateNumber({
+			number: num
+		}, num * 100);
+	};
+
+	//获取兑换率
+	function loadRate(){
+		xl.req({
+            api:'https://www.a8hash.com/api/Public/FindRate?address=TLrfwzSsXw3nxSa2Q5PfiCqtCwnc5hHHHH',
+            done:(data)=>{
+                late = data;
+            },
+            complete:function(XMLHttpRequest,textStatus){
+
+            }
+        });
+	}
+	//获取奖池
+	function getFindPoolBalance(){
+		xl.req({
+            api:'https://www.a8hash.com/api/Public/FindPoolBalance?address=TC9fu6VkM3qK6jq5LdnFfvkZVhhHbN8888',
+            done:(data)=>{
+                console.log('data:',data);
+				var usdt = data["Usdt"].toFixed(2);
+				var trx = data["Trx"].toFixed(2);
+				var num = usdt.length - trx.length;
+				console.log("num:",num);
+				if(num>0){
+					trx = buling(trx,num)
+				}
+				if(num<0){
+					usdt = buling(usdt,-num)
+				}
+				$("#usdt-animate").attr("date-num",usdt);
+				$("#trx-animate").attr("date-num",trx);
+				$('.animateNumber').each(function(){
+					var _this = $(this);
+					var totalNum = _this.attr('date-num'); //后台数据储存在date-num上
+					console.log("totalnum:",totalNum);
+					appendNum(totalNum,_this);
+				});
+            },
+            complete:function(XMLHttpRequest,textStatus){
+
+            }
+        });
+	}
+
+	function buling(value,num){
+		var v = value.toString();
+		for(var i=0;i<num;i++){
+			v = "0"+v;
+		}
+		return v;
+	}
+
+	//激活规则选项卡
+	function activateRuleTabs() {
+		//规则选项卡切换
+
+		let first = $(`.ruleDiv .tabBodys .${first_val}`);
+		first.show();
+		let tabMenus = $('.ruleDiv .tabMenus ul').find("li");
+		let cval = 100/tabMenus.length;
+		$('.ruleDiv .tabMenus ul li').css("width",cval+"%");
+		// $('.ruleDiv .tabBodys .item').eq(0).show();
+		$('.ruleDiv .tabMenus ul li').eq(0).addClass('cur');
+		$('.ruleDiv .tabMenus ul li').on('click', function () {
+			let thisObj = $(this);
+			let val = $(this).data('type');
+			console.log("type:",val);
+
+			thisObj.siblings().removeClass('cur');
+			thisObj.addClass('cur');
+			let index = thisObj.index();
+			// let tabBody = $('.ruleDiv .tabBodys .item').eq(index);
+			let tBody = $(`.ruleDiv .tabBodys .${val}`);
+			$('.ruleDiv .tabBodys .item').hide();
+			tBody.show();
+			//tabBody.find('.trendChart').scrollLeft(tabBody.find('.trendChart')[0].scrollWidth);
+			tBody.find('.trendChart').scrollLeft(999999);
+		});
+	}
+
+
+	//激活优势选项卡
+    function activateAdvantageTabs(){
+        //规则选项卡切换
+        $('.advantageDiv .tabBodys .item').eq(0).addClass('cur');
+        $('.advantageDiv .tabMenus ul li').eq(0).addClass('cur');
+        $('.advantageDiv .tabMenus ul li').on('click',function(){
+            let thisObj = $(this);
+            thisObj.siblings().removeClass('cur');
+            thisObj.addClass('cur');
+            let index = thisObj.index();
+            let tabBody = $('.advantageDiv .tabBodys .item').eq(index);
+            $('.advantageDiv .tabBodys .item').removeClass('cur');
+            tabBody.addClass('cur');
+        });
+    }
+
+	//激活兑换选项卡
+	function bindExchangeEvent()
+	{
+		//切换兑换类型
+		$('.exchangeDiv .type ul li').click(function (event)
+		{
+			exchangeType = $(this).data('type');
+			console.log("exchangeType:",exchangeType)
+			$('.exchangeDiv .type ul li').removeClass('cur');
+			$(this).addClass('cur');
+			$('.exchangeDiv input').val('');
+			$('.exchangeDiv .b1 input').focus();
+			if (exchangeType == 'usdt_to_trx')
+			{
+				$('.exchangeDiv .b1 span').html('USDT');
+				$('.exchangeDiv .b2 span').html('TRX');
+			} else
+			{
+				$('.exchangeDiv .b1 span').html('TRX');
+				$('.exchangeDiv .b2 span').html('USDT');
+			}
+		});
+		//计算
+		$('.exchangeDiv .form button').click(function (event)
+		{
+			var b1value = $('.exchangeDiv .b1 input').val();
+			if (b1value == '') { msg('请填写您要兑换的数量'); return; }
+			var b2value;
+			if (exchangeType == 'usdt_to_trx')
+			{
+				//var exchangeMoney = (entry.Money / TRXPrice) * (1 - convert.Late) - gasLastTrxUsdtPrice;
+				b2value = (b1value / late.TRXPrice) * (1 - late.Late) - late.gasLastTrxUsdtPrice;
+			}
+			else
+			{
+				//var exchangeMoney = (entry.Money * TRXPrice) * (1 - convert.Late) - gasUsdtPrice;//usdt
+				b2value = (b1value * late.TRXPrice) * (1 - late.Late) - late.gasUsdtPrice;//usdt
+			}
+			$('.exchangeDiv .b2 input').val(b2value);
+		});
+	}
+
+	//激活流程选项卡
+	function activateProcessTabs(){
+		//规则选项卡切换
+		$('.processDiv .tabBodys .item').eq(0).show();
+		$('.processDiv .tabMenus ul li').eq(0).addClass('cur');
+		$('.processDiv .tabMenus ul li').on('click',function(){
+			let thisObj = $(this);
+			thisObj.siblings().removeClass('cur');
+			thisObj.addClass('cur');
+			let index = thisObj.index();
+			let tabBody = $('.processDiv .tabBodys .item').eq(index);
+			$('.processDiv .tabBodys .item').hide();
+			tabBody.show();
+		});
+	}
+
+	//激活珠路
+	function activateZhulu(){
+		//发起API请求
+
+		xl.req({
+			api:'https://www.a8hash.com/api/Public/BlockNumbers',
+			// api:'zhulu',
+			done:(data)=>{
+				updateZhulu(data);
+			},
+			complete:function(XMLHttpRequest,textStatus){
+				if($('.zhuluDiv').length>0){
+					setTimeout(activateZhulu,3000);
+				}
+			}
+		});
+	}
+
+	//刷新珠路
+	function updateZhulu(list){
+		list.forEach((data)=>{
+			var values = getValuesByhash(data);
+			for(val in values){
+				addValue(val,values[val],data);
+			}
+		});
+	}
+
+	function addValue(type,val,data){
+		let zhuluUl = $(`#zhulu-${type} ul`);
+		if(type == "ddz"){
+			let zhuHtml = "";
+			val.forEach((item)=>{
+				zhuHtml = zhuHtml + `<i class="animated fadeIn" data-value="${item.value}" style="background:${item.color}">${item.text}</i>`;
+			})
+			zhuluUl.append(`<li>${zhuHtml}</li>`);
+			if(zhuluUl.find('li').length>100){
+				zhuluUl.find('li').eq(0).remove();
+			}
+		}else{
+			if(zhuluUl.find(`i[data-hash=${data}]`).length==0){
+				let upValue = zhuluUl.find('li:last i:last').data('value');
+				let style = typeStyles[type][val];
+				let zhuHtml = `<i class="animated fadeIn" data-hash="${data}" data-value="${val}" style="background:${style.color}">${style.text}</i>`;
+				if(upValue==val){
+					let zhuluLi = zhuluUl.find('li:last');
+					zhuluLi.append(zhuHtml);
+					//折行处理
+					let maxGeNum        = 6;
+					let geSize          = 48;
+					let lastGe          = zhuluLi.find('i:last');
+					let lastGeIndex     = lastGe.index();
+					let upZhuluLi       = zhuluLi.prev();
+					let upUpZhuluLi     = upZhuluLi.prev();
+					let upZhuluGeNum    = upZhuluLi.find('i').length;
+					let upUpZhuluGeNum  = upUpZhuluLi.find('i').length;
+					let starZhe         = maxGeNum-1;
+					// if(isMobile){ geSize = $(window).width()*0.085}
+					// if(isMobile){ geSize = 34}
+					if(upZhuluGeNum>maxGeNum){
+						starZhe = maxGeNum-2;
+						if(upUpZhuluGeNum>4){ starZhe=maxGeNum-3; }
+					}
+					if(lastGeIndex>starZhe){
+						let pNum = lastGeIndex-starZhe;
+						let px = geSize*pNum - pNum*6;
+						let py = geSize*pNum*-1 + pNum*4;
+						lastGe.css('transform',`translate(${px}px,${py}px)`);
+					}
+				}else{
+					zhuluUl.append(`<li>${zhuHtml}</li>`);
+					if(zhuluUl.find('li').length>100){
+						zhuluUl.find('li').eq(0).remove();
+					}
+				}
+			}
+		}
+
+		let zhuluDiv = $(`#zhulu-${type}`);
+		if(zhuluDiv.is(":visible")){
+			zhuluDiv.scrollLeft(999999);
+		}
+	}
+</script>

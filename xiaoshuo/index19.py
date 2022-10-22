@@ -19,7 +19,7 @@ async def aiodownload(url):
             async with aiofiles.open(f"video/{n}.ts",mode="wb") as f:
                 await f.write(dic)
                 n += 1
-            
+
 
 
 
@@ -32,11 +32,11 @@ header = {
     "Referer": "https://91kanju.com"
 }
 
-resp = requests.get(url,headers=header)
+resp = requests.get(url,headers=header,verify=False)
 
-# print(resp.text)
+print(resp.text)
 
-m3u8_url = obj.search(resp.text).group("url") 
+m3u8_url = obj.search(resp.text).group("url")
 # /20220505/RUnWTAqo/1100kb/hls/index.m3u8
 frontm3u8_url = "https://v4.cdtlas.com/"
 print("第一个地址",m3u8_url)

@@ -8,23 +8,25 @@ from selenium.webdriver.support.select import Select #select 需要包装
 # chromeoption.add_argument('--no-sandbox')  # 解决linux DevToolsActivePort文件不存在的报错
 # chromeoption.add_argument(
 #             'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36')
-
+print("Enter your Tag:")
+releaseTag = input()
+print("please waiting ................................:")
 # web = Chrome(chrome_options=chromeoption)
 chrome_driver=r'C:\Users\admin\AppData\Local\Programs\Python\Python310\Scripts\chromedriver.exe'
 chrome_options = wb.ChromeOptions()
 chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
 chrome_options.add_argument(
-            'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36')
+            'user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36')
 
 web = wb.Chrome(executable_path=chrome_driver,options=chrome_options)
 
-# web.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
-#     "source": """
-#     Object.defineProperty(navigator, 'webdriver', {
-#         get: () => undefined
-#     })
-#     """
-# })
+web.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+    "source": """
+    Object.defineProperty(navigator, 'webdriver', {
+        get: () => undefined
+    })
+    """
+})
 # http://13.229.199.19:8080/login?from=%2Fview%2FhashWeb
 web.get("http://13.229.199.19:8080/login?from=%2Fview%2FhashWeb")
 
@@ -52,7 +54,7 @@ time.sleep(3)
 input_box.send_keys('H5')
 password_box.send_keys("123456",Keys.ENTER)
 
-time.sleep(2) 
+time.sleep(2)
 
 betbranch = web.find_element_by_xpath('//*[@id="job_HashBetH5"]/td[3]/a')
 
@@ -66,7 +68,7 @@ build_box.click()
 
 input_tag_box = web.find_element_by_xpath('//*[@id="main-panel"]/form/table/tbody[1]/tr[1]/td[3]/div/input[2]')
 
-input_tag_box.send_keys('RLS_20220527T1417_22031401')
+input_tag_box.send_keys(releaseTag)
 
 time.sleep(1)
 

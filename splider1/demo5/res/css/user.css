@@ -1,0 +1,220 @@
+/*重定义下拉框*/
+    .xlSelect{ min-width:200px; background-color:#222a4c; border-radius:5px 20px; }
+    .xlSelect .layui-form-select .layui-input{ background-color:transparent; border:0; padding:30px 20px; }
+    .xlSelect .layui-form-select .layui-input{ text-align:center; color:#efc158; font-size:18px; }
+    .xlSelect .layui-form-select .layui-edge{ border-top-color:#efc158; left:70%; }
+    .xlSelect .layui-form-select .layui-input::-webkit-input-placeholder{ color:#808bbc; }
+    .xlSelect .layui-form-select .layui-input:-moz-placeholder{ color:#808bbc; }
+    .xlSelect .layui-form-select .layui-input::moz-placeholder{ color:#808bbc; }
+    .xlSelect .layui-form-select .layui-input:-ms-input-placeholder{ color:#808bbc; }
+    .xlSelect .layui-form-select dl{ top:65px; color:#fff; text-align:center; border-radius:5px; }
+    .xlSelect .layui-form-select dl{ border:0; background:#323c6a;box-shadow:0 2px 4px rgb(0 0 0 / 25%); }
+    .xlSelect .layui-form-select dl dd{ line-height:40px; font-size:16px; }
+    .xlSelect .layui-form-select dl dd:hover{ background: #3a4578; color:#e8e9ee; }
+    .xlSelect .layui-form-select dl dd.layui-select-tips{ color:#808bbc; }
+    .xlSelect .layui-form-select dl dd.layui-this{ background:#efc158; color:#794308; }
+
+    .xlTable{ background:#232a4b; }
+    .xlTable ul{ display:table; width:100%; display:flex; }
+    .xlTable ul li{ float:left; font-family:Roboto; text-align:center; }
+    .xlTable .head{ background:#323c6a; }
+    .xlTable .head li{ height:60px; line-height:60px; font-size:20px; color:#fff;  }
+    .xlTable .line{ border-bottom:1px dashed #343d6e; }
+    .xlTable .line:hover{ background:#1e2442; }
+    .xlTable .line li{ height:50px; line-height:50px; font-size:16px; color:#d1d7f7; }
+    .xlTable .notip{ font-size:18px; text-align:center; color:#fff; display:block; }
+    .xlTable .notip::before{ content:" "; display:block; width:280px; height:261px; margin:120px auto 38px auto; }
+    .xlTable .notip::before{ background:url(img/nomore_pc.png) no-repeat 50%; background-size:contain;}
+    .xlPages .layui-laypage a, .xlPages .layui-laypage span{ height:38px; border:0; background-color:#323c6a;margin-right:10px; border-radius:5px; }
+    .xlPages .layui-laypage a, .xlPages .layui-laypage span{ line-height:38px; color:#9ba1c2; font-size:14px; }
+    .xlPages .layui-laypage a:hover, .xlPages .layui-laypage span:hover{ color:#efc158; }
+    .xlPages .layui-laypage .layui-laypage-curr .layui-laypage-em { background-color:#efc158; }
+    .xlPages .layui-laypage .layui-laypage-curr em{ color:#85500e; }
+
+
+/*用户中心框架页 index */
+    .userVideoBg{ position:absolute; display:block; width:100%; height:500px; background-image:url(img/user-bg.png); background-size:100% 100%; overflow:hidden; }
+    .userVideoBg video{ object-fit:fill; width:100%; height:100%; }
+    .userBody{ margin:130px auto 80px auto; position:absolute; }
+    .userBody .menu{ float:left; width:180px; border-bottom:1px solid #12172b; background:#232a48; min-height:750px; color:#fff; text-align:center; }
+    .userBody .menu h3{ width:100%; height:110px; background:rgba(50,60,106,.75);  border-bottom:0.5px solid #ff7528; }
+    .userBody .menu h3{ line-height:110px; font-size:20px; font-weight:700; cursor:pointer; }
+    .userBody .menu ul li{ position:relative;  width:100%; height:116px; font-weight:500; font-size:16px; overflow:hidden; cursor:pointer; }
+    .userBody .menu ul li:before{ content:" "; display:block; position:absolute; bottom:0; width:90%; left:5%; height:100%; border-bottom:1px solid #4d5a8c; }
+    .userBody .menu ul li.cur{ background:#efc158; color:#794308; }
+    .userBody .menu ul li.cur:before{ display:none; }
+    .userBody .menu ul li i{ display:block; margin:32px auto 6px auto; font-size:24px; }
+    .userBody .buttons button{ margin:20px auto; cursor:pointer; padding:10px 20px; border-radius:5px; width:150px; }
+    .userBody .buttons button{ background:#2c3664; color:#8494db; transition:all 0.5s; }
+    .userBody .buttons button:hover{ background:#44518d; color:#b3c0f9; }
+    .userBody .buttons button:last-child{ margin-top:0; }
+    .userBody .main{ float:left; width:1050px; margin-left:20px; min-height:750px; }
+
+/* 用户中心首页 home */
+    .userHomeDiv{ display:table; width:100%; margin-left:20px; }
+    .userHomeDiv .logo{ display:block; width:220px; height:46px;  margin:70px auto 70px auto; }
+    .userHomeDiv .logo{ background:url(img/logo.png) no-repeat; background-size:auto 100%; background-position:center; }
+
+    .userHomeDiv .showBlock{ display:table; width:100%; }
+    .userHomeDiv .showBlock .item{ float:left; width:440px; height:180px; padding:12px 24px; border-radius:10px; margin-right:40px; position:relative; }
+    .userHomeDiv .showBlock .item{ background:rgba(51,60,106,.9); box-shadow:0 6px 12px rgb(23 28 54 / 75%); text-align:center; }
+    .userHomeDiv .showBlock .item:last-child{ margin-right:0; }
+    .userHomeDiv .showBlock .item .img{ display:block; margin:30px auto 10px auto; width:60px; height:60px; }
+    .userHomeDiv .showBlock .item .img{ background-repeat:no-repeat; background-size:100% auto;}
+    .userHomeDiv .showBlock .myAddress .img{ background-image:url(img/svg/usdtIcon.svg); }
+    .userHomeDiv .showBlock .myAddress span{ display:block; margin:10px auto 20px auto; font-size:18px;  }
+    .userHomeDiv .showBlock .myAddress span i{ display:inline-block; margin:0 10px; color:#ff7528; }
+    .userHomeDiv .showBlock .myAddress p{ font-size:14px; }
+    .userHomeDiv .userMenu button{ background:#313965; color:#fff; padding:3vw 0; border-radius:5px; width:42.5vw; margin-left:5vw; }
+    .userHomeDiv .userMenu button:last-child{  margin-left:3vw; }
+
+    .userHomeDiv .showBlock .record .img{ background-image:url(img/svg/History.svg); margin-top:40px; }
+    .userHomeDiv .showBlock .record p{ font-size:18px; font-weight:700; margin-top:20px; }
+    .userHomeDiv .showBlock .record .toRecordBut{ position:absolute; width:28px; height:28px; border-radius:6px; top:85px; right:55px; cursor:pointer; }
+    .userHomeDiv .showBlock .record .toRecordBut{ background:#e3b14a url(img/link.png) no-repeat 50%;  background-size:40% 60%;  box-shadow:0 4px 4px #2a335d; }
+
+    .userHomeDiv .about{ margin-top:40px; }
+    .userHomeDiv .about h3{ display:table; margin:auto; font-size:20px; font-weight:700; }
+    .userHomeDiv .about h3::before,
+    .userHomeDiv .about h3::after{ content:' '; display:inline-block; background: url(img/svg/arrow.svg) no-repeat 50%; width:55px; height:15px; margin:0 20px; }
+    .userHomeDiv .about h3::after{ transform: rotate(180deg); }
+    .userHomeDiv .about h4{ display:table; margin:20px auto 10px auto; font-size:20px; font-weight:normal; }
+    .userHomeDiv .about h5{ display:table; margin:10px auto; font-size:20px; font-weight:normal;  }
+
+    .userHomeDiv .content{ background:#1e2543; margin:32px auto 0 auto; padding:60px; height:70x;  line-height:2; border-radius:10px; position:relative; }
+    .userHomeDiv .content::after{ content:' '; position:absolute; display:inline-block; width:180px; height:153px; margin:0 20px; top:-70px; right:0; }
+    .userHomeDiv .content::after{ background: url(img/gold.png) no-repeat; background-size:100% 100%; } 
+
+
+/* 赚币 coins */
+    .userCoinsDiv{ background:linear-gradient(180deg,#262e53 -4.78%,#181e38); min-height:750px; }
+    .userCoinsDiv .share{ height:312px; overflow:hidden; }
+    .userCoinsDiv .share{ background:url(img/user-coins-top.png) no-repeat; background-size:100% 100%; }
+    .userCoinsDiv .share h3{ margin:35px 0; text-align:center; font-weight:700; font-size:36px; color:#f4daaf; line-height:1.5; }
+    .userCoinsDiv .form{ display:table; margin:100px auto 0 auto; }
+    .userCoinsDiv .form input{ float:left; width:360px; height:60px; padding:0px 20px; }
+    .userCoinsDiv .form input{ background:#434e80; border:0; color:#fff; border-radius:10px; }
+    .userCoinsDiv .form button{ width:160px; height:60px; margin-left:10px; border-radius:10px; font-size:16px; font-weight:bold; }
+
+    .userCoinsDiv .count{ display:table; width:100%; }
+    .userCoinsDiv .count .total{ display:table; width:490px; margin:30px auto 0 auto; background:#d9ab43; border-radius:10px; padding:15px 60px; }
+    .userCoinsDiv .count .total{ font-size:16px; color:#794308; font-weight:700; line-height:30px; }
+    .userCoinsDiv .count .total i{ float:right; position:relative; font-size:24px; }
+    .userCoinsDiv .count .total i::after{ content:' '; position:absolute; display:inline-block; width:32px; height:30px;left:-40px; top:0; }
+    .userCoinsDiv .count .total i::after{ background: url(img/Vector.png) no-repeat; background-size:100% 100%; } 
+    .userCoinsDiv .level{ display:table; margin:30px auto 50px auto; }
+    .userCoinsDiv .level ul{ display:table; }
+    .userCoinsDiv .level ul li{ float:left; width:190px; height:130px; margin-right:20px; background:#353f6c; border-radius:10px; text-align:center; }
+    .userCoinsDiv .level ul li:last-child{ margin-right:0; }
+
+    .userCoinsDiv .level ul li span{ display:block; margin:30px 0 20px 0; text-align:center; color:#e3b14a; font-weight:700; font-size:18px;}
+    .userCoinsDiv .level ul li span i{ font-size:28px; margin-right:8px; }
+
+/* 投注记录 record */
+    .userRecordDiv form{ display:table; margin-bottom:20px; }
+    .userRecordDiv .xlSelect{ float:left; width:330px; margin-right:25px; }
+    .userRecordDiv .xlSelect:last-child{ margin-right:0; }
+    .userRecordDiv .xlTable{ min-height:620px;}
+
+/* 邀请 invite */
+    .userInviteDiv .xlTable{ min-height:700px;}
+
+/* 佣金 commissione */
+    .userCommissioneDiv .xlTable{ min-height:700px;}
+
+
+/*手机版*/
+@media(max-width:800px){
+
+    /*通用*/
+    .mlist{ width:90vw; margin:18vw auto 5vw auto; }
+    .mlist ul li{ padding:4vw 5vw; display:table; min-height:15vw; background:#273056; border-radius:2vw; width:80vw; margin-bottom:4vw; }
+    .mlist ul li div{ float:left; margin:1vw 0;  }
+    .mlist ul li div.c1{ width:100%; }
+    .mlist ul li div.c2{ width:50%; }
+    .mlist ul li div.line{ width:100%; height:1px; margin:3vw 0; padding:0; background-color:#3b487e; }
+    .mlist ul li div span{ color:#a1acdd; }
+    .mlist .notip{ font-size:6vw; text-align:center; color:#fff; display:block; }
+    .mlist .notip::before{ content:" "; display:block;  height:40vw; margin:20vw auto 8vw auto; }
+    .mlist .notip::before{ background:url(img/nomore_pc.png) no-repeat 50%; background-size:contain;}
+    .layui-flow-more{ padding:5vw; color:#495797!important; font-size:4vw!important; }
+    .layui-flow-more a cite{ border-radius:3vw!important; background-color:#ffc756!important; color:#915710!important; }
+
+    .xlSelect{ min-width:40vw; border-radius:1vw 5vw; }
+    .xlSelect .layui-form-select .layui-input{ padding:0; height:12vw; line-height:12vw; font-size:4vw; }
+    .xlSelect .layui-form-select .layui-edge{ left:70%; }
+    .xlSelect .layui-form-select dl{ top:12vw; }
+    .xlSelect .layui-form-select dl dd{ line-height:12vw; font-size:4vw; }
+
+    /* 赚币 coins */
+    .userCoinsDiv{ min-height:auto; }
+    .userCoinsDiv .share{ height:70vw; background-image:url(img/user-coins-top-h5.png)}
+    .userCoinsDiv .share h3{ margin:8vw 0; font-size:7vw; height:20vw; }
+    .userCoinsDiv .form{ margin:25vw auto 0 auto; }
+    .userCoinsDiv .form input{ width:48vw; height:14vw; padding:0px 5vw; }
+    .userCoinsDiv .form input{ border-radius:3vw; }
+    .userCoinsDiv .form button{ width:30vw; height:14vw; margin-left:3vw; border-radius:3vw; font-size:4vw; }
+
+    .userCoinsDiv .links{ margin:5vw; }
+    .userCoinsDiv .links ul{ display:table; }
+    .userCoinsDiv .links ul li{ float:left; width:42vw; height:28vw; margin-right:5vw; border-radius:3vw; }
+    .userCoinsDiv .links ul li{ background:#353f6c; text-align:center; }
+    .userCoinsDiv .links ul li:last-child{ margin-right:0; }
+    
+    .userCoinsDiv .links ul li i{ display:block; margin:6vw 0 4vw 0; font-size:7vw; }
+    .userCoinsDiv .links ul li i i{ font-size:7vw; margin-right:2vw; }
+
+    .userCoinsDiv .count{ width:100%; }
+    .userCoinsDiv .count .total{ width:80vw; margin:6vw 0 0 5vw; border-radius:3vw; padding:4vw 5vw; }
+    .userCoinsDiv .count .total{ font-size:4vw; line-height:8vw; }
+    .userCoinsDiv .count .total i{ font-size:7vw; }
+    .userCoinsDiv .count .total i::after{ width:6vw; height:6vw; left:-10vw; top:1vw; }
+
+    .userCoinsDiv .level{ margin:5vw; }
+    .userCoinsDiv .level ul li{ width:28vw; height:28vw; margin-right:3vw; border-radius:3vw; }
+    .userCoinsDiv .level ul li span{ margin:6vw 0 4vw 0; font-size:6vw;}
+    .userCoinsDiv .level ul li span i{ font-size:7vw; margin-right:2vw; }
+
+    /* 用户中心首页 home */
+    .userHomeDiv{ margin-left:0; }
+    .userHomeDiv{ background-image:url(img/user-bg-h5.png); background-position:0 -5vw; background-size:100% auto; background-repeat:no-repeat; }
+    .userHomeDiv .logo{ width:60vw; height:13vw;  margin:15vw auto 10vw auto; }
+
+    .userHomeDiv .showBlock .item{ width:80vw; height:40vw; padding:4vw 5vw; border-radius:3vw; margin:0 5vw 5vw 5vw; }
+
+    .userHomeDiv .showBlock .item .img{ margin:5vw auto 3vw auto; width:16vw; height:16vw; }
+    .userHomeDiv .showBlock .myAddress span{ margin:3vw auto 4vw auto; font-size:5vw; }
+    .userHomeDiv .showBlock .myAddress span i{ margin:0 2vw; }
+    .userHomeDiv .showBlock .myAddress p{ font-size:3.5vw; }
+    .userHomeDiv .showBlock .record{ height:27vw; }
+    .userHomeDiv .showBlock .record .img{ margin:2vw auto 0vw auto; }
+    .userHomeDiv .showBlock .record p{ font-size:5vw; margin-top:0; }
+    .userHomeDiv .showBlock .record .toRecordBut{ width:10vw; height:10vw; border-radius:1vw; top:12vw; right:8vw; }
+
+    .userHomeDiv .about{ margin-top:5vw; }
+    .userHomeDiv .about h3{ font-size:6vw; }
+    .userHomeDiv .about h3::before,.userHomeDiv .about h3::after{ width:20vw; height:4vw; margin:0 5vw; }
+    .userHomeDiv .about h4{ margin:5vw auto 5vw auto; font-size:5vw; }
+    .userHomeDiv .about h5{ margin:5vw auto; font-size:5vw; }
+
+    .userHomeDiv .content{ margin:5vw; width:80vw; padding:12vw 5vw 5vw 5vw; border-radius:3vw; }
+    .userHomeDiv .content::after{ width:27vw; height:24vw; margin:0; top:-9vw; right:0; }
+
+
+/* 投注记录 record */
+    .userRecordDiv form{ display:table; margin:18vw 0 2vw 5vw; }
+    .userRecordDiv .xlSelect{ float:left; width:42.5vw; margin:0 auto 3vw auto; }
+    .userRecordDiv .xlSelect:nth-child(2){ margin-left:5vw }
+    .userRecordDiv .xlSelect:nth-child(3){ width:90vw; }
+    .userRecordDiv .xlSelect .layui-form-select .layui-edge{ left:75%; }
+    .userRecordDiv .xlSelect:nth-child(3) .layui-form-select .layui-edge{ left:65%; }
+    .userRecordDiv .mlist{ margin-top:0; }
+    .userRecordDiv .mlist ul li{ margin-bottom:4vw; }
+/* 邀请 invite */
+    .userInviteDiv .headBar .xlSelect{ width:25vw; }
+
+/* 佣金 commissione */
+.userCommissioneDiv .xlTable{ min-height:700px;}
+
+
+}

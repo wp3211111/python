@@ -5,7 +5,7 @@
 
 # 协程  当程序处于IO操作的时候,可以选择性的切换到其他任务上
 
-# 多任务异步操作 
+# 多任务异步操作
 import asyncio
 
 import time
@@ -17,28 +17,28 @@ def func():
 
 
 async  def  func1():
-    print("你好啊,我是cluo") 
+    print("你好啊,我是cluo")
 async  def  func2():
     # time.sleep(3)
     await asyncio.sleep(3)
-    print("你好啊,我是cluo1") 
+    print("你好啊,我是cluo1")
 
 async  def  func3():
     # time.sleep(4)
     await asyncio.sleep(4)
-    print("你好啊,我是cluo2") 
+    print("你好啊,我是cluo2")
 
 async  def  func4():
     await asyncio.sleep(5)
-    print("你好啊,我是cluo3") 
+    print("你好啊,我是cluo3")
 
 async  def  func5():
     await asyncio.sleep(6)
-    print("你好啊,我是cluo4") 
+    print("你好啊,我是cluo4")
 
 async  def  func6():
     await asyncio.sleep(7)
-    print("你好啊,我是cluo5") 
+    print("你好啊,我是cluo5")
 
 if __name__ == "__main__" :
     fn1 = func1()
@@ -48,8 +48,8 @@ if __name__ == "__main__" :
     fn5 = func5()
     fn6 = func6()
     asyncio.create_task(fn1)
-    # tasks = [ asyncio.create_task(fn1) ,asyncio.create_task(fn2),asyncio.create_task(fn3)asyncio.create_task(fn4)] 
-    
+    # tasks = [ asyncio.create_task(fn1) ,asyncio.create_task(fn2),asyncio.create_task(fn3)asyncio.create_task(fn4)]
+
     tasks = [fn1,fn2,fn3,fn4,fn5,fn6]
     time1 = time.time()
     asyncio.run(asyncio.wait(tasks))

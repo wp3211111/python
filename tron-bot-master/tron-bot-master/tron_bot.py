@@ -13,7 +13,6 @@ import threading as thd
 import requests
 import telegram
 import schedule
-import pad
 import time
 from telegram import (
     InlineKeyboardButton,
@@ -178,7 +177,7 @@ def dapps(update, context):
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
-    update.message.reply_text( 
+    update.message.reply_text(
         parse_mode=telegram.ParseMode.MARKDOWN,
         text='Select a category',
         reply_markup=reply_markup
@@ -209,7 +208,7 @@ def start(update, context):
         投注30万U奖励：388.88USDT\n
         投注50万U奖励：588.88USDT\n
         投注100万U奖励：888.88USDT\n
-        TRX投注奖励×10倍同上兑现\n 
+        TRX投注奖励×10倍同上兑现\n
         🎁活动四：玩家救济金（负分）奖励\n
         负1000U以上2%，负5000U以上3%\n
         负20000以上4%，负50000以上5%\n
@@ -230,7 +229,7 @@ def start(update, context):
     text_response = views.BASE_START_TEXT.format(
         user_name=usr_name
     )
-    
+
     # t1=threading.Timer(10,function=sendmessage(update,context) )  # 创建定时器
     # t1.start()  # 开始执行线程
     context.bot.send_message(
@@ -430,7 +429,7 @@ def sendmessage (update,context):
         投注30万U奖励：388.88USDT\n
         投注50万U奖励：588.88USDT\n
         投注100万U奖励：888.88USDT\n
-        TRX投注奖励×10倍同上兑现\n 
+        TRX投注奖励×10倍同上兑现\n
         🎁活动四：玩家救济金（负分）奖励\n
         负1000U以上2%，负5000U以上3%\n
         负20000以上4%，负50000以上5%\n
@@ -441,37 +440,37 @@ def sendmessage (update,context):
         不论你是玩家还是代理，投注时请查询平台的收款地址资金，如果庄家资金量小，请不要投注，避免无法提现。\n
         所有活动联系在线客服进行申请！祝您游戏愉快
     """)
-# 
-# 
-# 
-# 
-
-# 
-# 
-# 
-# 
-# 
-# 
+#
+#
+#
+#
 
 #
-# 
-# 
+#
+#
+#
+#
+#
 
-# 
+#
+#
+#
 
-# 
-#  
-# 
+#
 
-# 
+#
+#
+#
 
-# 
+#
+
+#
     return sendmessage(update,context)
 
 def callback_data(update, context):
     bot = context.bot
     query = update.callback_query
-    
+
     if query.data in constants.DAPPS_CAT:
         result = requests.get(helpers.dapps_category(query.data)).json()
 
@@ -582,7 +581,7 @@ def error(  update, context, error):
 def fn(update,context):
     sendmessage(update,context)
     thd.Timer(10,fn).start()
-    
+
 
 # def run():
 #     print("每隔10秒执行")
@@ -598,22 +597,22 @@ def fn(update,context):
 #     print("I'm working for job1")
 #     time.sleep(2)
 #     print("job1:", datetime.datetime.now())
- 
+
 # def job2():
 #     print("I'm working for job2")
 #     time.sleep(2)
 #     print("job2:", datetime.datetime.now())
- 
+
 # def job1_task():
 #     threading.Thread(target=job1).start()
- 
+
 # def job2_task():
 #     threading.Thread(target=job2).start()
- 
+
 # def run():
 #     schedule.every(10).seconds.do(job1_task)
 #     schedule.every(10).seconds.do(job2_task)
- 
+
 #     while True:
 #         schedule.run_pending()
 #         time.sleep(1)
@@ -669,11 +668,11 @@ def main():
     dp.add_handler(CommandHandler("createaccount", createaccount))
     dp.add_handler(CommandHandler("stats", stats))
     dp.add_handler(CommandHandler('dapps', dapps))
-    
 
 
 
- 
+
+
 
     # messages
     # dp.add_handler(MessageHandler(Filters.text, filter_text_input))
@@ -682,7 +681,7 @@ def main():
     dp.add_error_handler(error)
     # Run the bot
     updater.start_polling()
-    
+
     # Run the bot until the you presses Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since
     # start_polling() is non-blocking and will stop the bot gracefully.
@@ -690,8 +689,8 @@ def main():
 
 
 
-   
-   
+
+
 
 
 if __name__ == '__main__':

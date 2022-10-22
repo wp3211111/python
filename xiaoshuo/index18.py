@@ -8,7 +8,7 @@ import requests
 
 header = {
     "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36",
-     "Referer": "http://baidu.com/"
+     "Referer": "https://w2.heiyan.com/"
 }
 
 async def aiodownload(cid,b_id,title):
@@ -25,24 +25,23 @@ async def aiodownload(cid,b_id,title):
             dic = await resp.json()
             async with aiofiles.open(title,mode="w",encoding="utf-8") as f:
                 await f.write(dic['data']['novel']['content'])
-            
+
 
 
 
 async def  getCatalog(url):
     resp = requests.get(url,headers = header)
-    dic = resp.json()
-    print(dic)
+    text = resp.text()
+    print(text)
     tasks = []
-    for  item in dic['data']['novel']['items']:
-        title = item['title']
-        cid  =  item['cid']
-        tasks.append(aiodownload(cid,b_id,title))
+    # for  item in dic['data']['novel']['items']:
+    #     title = item['title']
+    #     cid  =  item['cid']
+    #     tasks.append(aiodownload(cid,b_id,title))
 
     await asyncio.wait(tasks)
 
 
 if __name__ == "__main__":
-    b_id = "4306063500"
-    url = 'http://dushu.baidu.com/api/pc/getChapterContent?data={"book_id":"'+ b_id+'"}'
+    url = 'https://w2.heiyan.com/book/149074/12715039'
     asyncio.run(getCatalog(url))

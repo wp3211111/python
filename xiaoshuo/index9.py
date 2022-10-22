@@ -2,8 +2,7 @@ import requests
 
 
 proxys  = {
-    "http" : "http://39.130.150.42:80",
-    "hppts" :  "https://39.130.150.42:80"
+    "http" : "120.237.144.57:9091",
 }
 
 header = {

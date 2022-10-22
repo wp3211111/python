@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="noJs">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html">
+
+		<title>Light Finance</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<meta name="robots" content="index, nofollow">
+
+		
+		<link rel="canonical" href="https://www.lightfinance.co.uk/error">
+        <link rel="icon" href="https://www.lightfinance.co.uk/favicon.ico">
+
+		<link rel="stylesheet" href="resources/css/animations-v2.css" media="screen">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="resources/css/desktop/1/global.a305cdcc.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Krub:300,400,500,600,700">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster:400">
+
+				<script src="resources/js/jsSupportProvided.106a41b8.js"></script>
+	</head>
+	<body class="leveldown formBackground">
+		<iframe class="hidden" src="https://www.lightfinance.co.uk/error?pagePixelOnly=true"></iframe>
+				<div class="allowInherit">
+<span class="hidden" id="cookieScriptData" 
+    data-baseloaderurl="https&#58;&#47;&#47;www&#46;lightfinance&#46;co&#46;uk"
+    data-cookietext1="We&#32;use&#32;cookies&#32;to&#32;help&#32;provide&#32;you&#32;with&#32;the&#32;best&#32;online&#32;experience&#46;&#32;&#10;Click&#32;"
+    data-cookietext2="&#32;to&#32;find&#32;out&#32;more&#46;&#32;"
+    data-timeout="5000"
+    data-closebtn="show"
+></span>		<header >
+			<div class="contentContainer">
+				<div class="flexyContainer">
+					<div class="flexyItem logo">
+						<a href="https://www.lightfinance.co.uk/Home"><img src="resources/images/logo.svg" class="logo-svg" data-at2x="images/logo@2x.png" alt="Logo"></a>
+					</div>
+					<div class="flexyItem right alignSelfCenter">
+						<div class="secure">
+							<i class="fas fa-lock"></i> Secure UK Site						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="contentContainer paddingTop60 paddingBottom60">
+			<div class="flexyContainer">
+				<div class="flexyItem center widthPercent100">
+					<div class="unsubImg">
+						<img src="resources/images/error.png">					</div>
+					<h1 class="widthPercent100">We're sorry...</h1>
+					There was a technical error, and we are not able to proceed with your application.<br><br>Please try again later today. Our technical team have been informed of this issue.				</div>
+			</div>
+		</div>
+						<footer >
+			<div class="contentContainer">
+				<div class="flexyContainer">
+					<div class="flexyItem colOne">
+						<div class="footerLogo">
+							<img src="resources/images/logo-white.svg" data-at2x="resources/images/logo-white@2x.png">
+						</div>
+						<br><br>
+						Please be advised that this website is not part of Facebook, Instagram or Facebook Inc. Additionally, this site is not endorsed by Facebook or Instagram in any way. Facebook&reg; is a registered trademark of Facebook, Inc. ("Facebook"). Instagram&reg; is a registered trademark of Facebook ("Instagram").						<br><br>
+						&copy; Light Finance 2022 All rights reserved. Light Finance is a trading name of TFLI (US) INC who is an Appointed Representative of TFLI Limited, who are a credit broker not a lender.					</div>
+					<div class="flexyItem colTwo">
+						<h1>Company</h1>
+						<div class="footerLinks">							<a href="https://www.lightfinance.co.uk/Faqs">Frequently Asked Questions</a>							<a href="https://www.lightfinance.co.uk/Complaints">Complaints Procedure</a>							<a href="https://www.lightfinance.co.uk/Contact">Contact Us</a>							<a href="https://www.lightfinance.co.uk/Fraud">Fraud Awareness</a>							<a href="https://www.lightfinance.co.uk/KIP">Key Information</a>							<a href="https://www.lightfinance.co.uk/ResponsibleLending">Responsible Lending</a>							<a href="https://www.lightfinance.co.uk/TreatingCustomersFairly">Treating Customers Fairly</a>						</div>
+					</div>
+					<div class="flexyItem colThree">
+						<h1>Privacy</h1>
+						<div class="footerLinks">							<a href="https://www.lightfinance.co.uk/Cookies">Cookie Policy</a>							<a href="https://www.lightfinance.co.uk/Unsubscribe">Opt Out</a>							<a href="https://www.lightfinance.co.uk/Privacy">Privacy Policy</a>							<a href="https://www.lightfinance.co.uk/TACs">Terms &amp; Conditions</a>						</div>
+					</div>
+					<div class="flexyItem colFour">
+						<img src="resources/images/ccta-logo-desktop.png">
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+		<script src="resources/js/runScripts.b23ad07e.js"></script>
+		<script nonce="5ac614de34c56e37">window['_fs_debug'] = false;window['_fs_host'] = 'fullstory.com';window['_fs_script'] = 'edge.fullstory.com/s/fs.js';window['_fs_org'] = 'D4860';window['_fs_namespace'] = 'FS';(function(m,n,e,t,l,o,g,y){if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};g.log = function(a,b){g("log",[a,b])};g.consent=function(a){g("consent",!arguments.length||a)};g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};g.clearUserCookie=function(){};g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};g._v="1.1.1";})(window,document,window['_fs_namespace'],'script','user');</script>
+		<script type="text/javascript">window._mfq=window._mfq||[],function(){var e=document.createElement("script");e.type="text/javascript",e.defer=!0,e.src="//cdn.mouseflow.com/projects/f2fd9d12-c8a0-45f8-96d7-76d027cc3512.js",document.getElementsByTagName("head")[0].appendChild(e)}();</script>
+		<script src="resources/js/cookiePopup.a9a7d44c.js" defer></script>
+	</body>
+</html>

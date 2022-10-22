@@ -29,9 +29,9 @@ web = wb.Chrome(executable_path=chrome_driver,options=chrome_options)
 # })
 # http://13.229.199.19:8080/login?from=%2Fview%2FhashWeb
 url = "http://13.229.199.19:8080/login?from=%2Fview%2FhashWeb"
-url1 = "http://www.betu88.com"
+url1 = "https://www.douyin.com/user/MS4wLjABAAAAybyX38OFlpMWkCw1snZFdF9TqUj4De3djKPza4IoCMs"
 url2 = "https://www.chaojiying.com"
-web.get(url2)
+web.get(url1)
 
 # print(web.title)
 
@@ -46,8 +46,6 @@ password_ele = web.find_element_by_xpath('//*[@id="pass"]')
 
 img = web.find_element_by_xpath('//*[@id="userone"]/section/form/div[3]/div/img').screenshot_as_png
 
-   
-# chaojiying = Chaojiying_Client('wp3211111','','933718')
 # dic = chaojiying.PostPic(img,1902)
 time.sleep(2)
 verify = '1234' #dic['pic_str']

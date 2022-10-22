@@ -1,0 +1,63 @@
+{
+  "header": {
+    "platformId": 1235,
+    "apiName": "/lottery-api/walletLog/queryLotteryReport",
+    "callTime": 1635125429137,
+    "token": "e3550f0717954c25a7c88228846ec905",
+    "sign": "4d9601f47fd00fb711bd17d903d66b5b",
+    "clientType": 4,
+    "clientVersion": null,
+    "apiVersion": "21101301",
+    "gzipEnabled": 0,
+    "languageCode": null,
+    "deviceCode": null
+  },
+  "body": {
+    "code": 1,
+    "message": "操作成功",
+    "data": {
+      "userId": 472,
+      "totalBetAmount": "547.00",
+      "validBetAmount": "547.00",
+      "cancelledAmount": "0.00",
+      "unopenAmount": "0.00",
+      "rebateAmount": "0.00",
+      "winAmount": "0.00",
+      "profitAmount": "-547.00",
+      "unwinAmount": "547.00",
+      "walletBalance": "499839.99",
+      "totalProfitAmount": "-547.00",
+      "previousDayProfitAmount": "0",
+      "nextDayProfityAmount": "0",
+      "lotteryReportList": {
+        "pageNo": 1,
+        "pageSize": 10,
+        "totalCount": 3,
+        "totalPage": 1,
+        "records": [
+          {
+            "lotteryId": 206,
+            "lotteryName": "极速快乐8",
+            "orderAmount": "7.00",
+            "profitAmount": "-7.00",
+            "winAmount": "0.00"
+          },
+          {
+            "lotteryId": 804,
+            "lotteryName": "加州时时彩B盘",
+            "orderAmount": "40.00",
+            "profitAmount": "-40.00",
+            "winAmount": "0.00"
+          },
+          {
+            "lotteryId": 11,
+            "lotteryName": "加州时时彩A盘",
+            "orderAmount": "500.00",
+            "profitAmount": "-500.00",
+            "winAmount": "0.00"
+          }
+        ]
+      }
+    }
+  }
+}
